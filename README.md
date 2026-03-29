@@ -38,14 +38,6 @@ The first activity of this project starts with a welcome page along with the opt
 ### General
 - **Sign Up and Login** – Secure authentication for both admins and customers
 
-## Team Members
-
-| Name | Student ID |
-|------|-----------|
-| Tamim Shadman | 2021522642 |
-| Readuanul Farid Fahim | 2021748642 |
-| Sumaya Akter Ruhi | 2022610642 |
-
 ## Getting Started
 
 > Setup instructions will be added as development progresses.
