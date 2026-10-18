@@ -28,11 +28,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Start Server in Background
-        run: |
-          node server.js &
-          sleep 3
-
       - name: Execute Full Verification Test Suite
         run: npm test
 
