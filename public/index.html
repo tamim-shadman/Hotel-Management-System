@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA GRAND | Ultra-Luxury Hotel & Residences Management System</title>
+  <meta name="description" content="Experience the pinnacle of hospitality management at Aura Grand Hotel & Residences. Seamless reservations, vacant room intelligence, automated RevPAR night audit, AI concierge, luxury yacht charters, and IoT sensory suites.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Tamim Shadman & Readuanul Farid Fahim">
+  <meta name="keywords" content="luxury hotel management, property management system, PMS, ultra-luxury resort, presidential suite, yacht charter, helicopter transfer, RevPAR, night audit">
+  <link rel="canonical" href="http://localhost:5000/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:5000/">
+  <meta property="og:title" content="AURA GRAND | Ultra-Luxury Hotel & Residences Management System">
+  <meta property="og:description" content="Turnkey 5-star hospitality management system. Vacant room intelligence, automated RevPAR night audit, AI concierge, luxury yacht & heli charters, and IoT sensory staterooms.">
+  <meta property="og:image" content="/assets/images/hero_resort.jpg">
+  <meta property="og:site_name" content="Aura Grand Hotel & Residences">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AURA GRAND | Ultra-Luxury Hotel & Residences Management System">
+  <meta name="twitter:description" content="Turnkey 5-star hospitality management system. Vacant room intelligence, automated RevPAR night audit, AI concierge, luxury yacht & heli charters, and IoT sensory staterooms.">
+  <meta name="twitter:image" content="/assets/images/hero_resort.jpg">
+
+  <!-- Stylesheet & Favicon -->
+  <link rel="stylesheet" href="/css/style.css?v=3.0">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg?v=3.0">
+  <link rel="alternate icon" href="/assets/images/favicon.svg?v=3.0">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.svg?v=3.0">
+  <meta name="theme-color" content="#070b14">
+
+  <!-- JSON-LD Hotel & FAQ Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Hotel", "LodgingBusiness"],
+        "@id": "http://localhost:5000/#hotel",
+        "name": "Aura Grand Hotel & Residences",
+        "description": "Ultra-luxury Forbes 5-star coastal resort featuring bespoke penthouses, Michelin star dining, superyacht charters, rooftop helipad, and private butler services.",
+        "url": "http://localhost:5000/",
+        "image": "http://localhost:5000/assets/images/hero_resort.jpg",
+        "telephone": "+1 (555) 019-2800",
+        "priceRange": "$$$$",
+        "starRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.98",
+          "reviewCount": "480",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "100 Ocean Crest Boulevard",
+          "addressLocality": "Palm Jumeirah",
+          "addressRegion": "Dubai",
+          "postalCode": "00000",
+          "addressCountry": "AE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 25.1124,
+          "longitude": 55.1390
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Private Rooftop Helipad", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Superyacht Marina Berths", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Michelin 3-Star Dining", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "24/7 Dedicated Butler Service", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Auric Thermal Hammam Spa", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "IoT Sensory Stateroom Controller", "value": true }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does Aura Grand's AI Concierge Butler work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Aura AI Virtual Butler is accessible 24/7 on the website to answer guest questions, recommend dining and spa treatments, and dispatch instant service orders directly to hotel staff."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What private mobility charters are available for hotel guests?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Guests can charter our 88-foot Sunseeker Superyacht 'Aura Sovereign', private Airbus ACH130 helicopter from our 52nd-floor rooftop helipad, or chauffeur-driven Rolls-Royce Phantom VIII."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the automated Night Audit feature in Aura Grand PMS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aura Grand PMS provides automated daily closing ledger reconciliation calculating RevPAR, ADR, ALOS, and balanced tax folios with cryptographically signed certificates."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Luxury Announcement & Currency Bar -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="announcement-text">
+      <span class="announcement-badge">✦ FORBES 2026 5-STAR</span>
+      <span class="announcement-ticker-content">Complimentary Maybach Chauffeur for Penthouse Bookings • Concierge: +1 (555) 019-2800</span>
+    </div>
+    <div class="announcement-controls">
+      <div class="announcement-control-item">
+        <label for="resortSelector" class="announcement-control-label">Portfolio:</label>
+        <select id="resortSelector" class="currency-picker" onchange="switchResort(this.value)" aria-label="Select Resort Portfolio">
+          <option value="resort_dubai" selected>🇦🇪 Palm Jumeirah (Dubai)</option>
+          <option value="resort_stmoritz">🇨🇭 St. Moritz (Swiss Alps)</option>
+          <option value="resort_monaco">🇲🇨 Côte d'Azur (Monaco)</option>
+          <option value="resort_nyc">🇺🇸 Manhattan Sky (NYC)</option>
+        </select>
+      </div>
+      <div class="announcement-control-item">
+        <label for="currencySelector" class="announcement-control-label">Currency:</label>
+        <select id="currencySelector" class="currency-picker" onchange="changeCurrency(this.value)" aria-label="Select Currency">
+          <option value="USD" selected>USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="AED">AED (AED)</option>
+          <option value="CHF">CHF (CHF)</option>
+          <option value="JPY">JPY (¥)</option>
+          <option value="BDT">BDT (৳)</option>
+        </select>
+      </div>
+      <button class="topbar-btn topbar-btn-gold" onclick="openCommercialProspectusModal()" title="View Commercial Enterprise Prospectus">
+        💎 Prospectus ($165K)
+      </button>
+      <button class="topbar-btn topbar-btn-subtle" onclick="openWhitelabelModal()" title="Customize White-Label Hotel Brand">
+        🎨 Brand Studio
+      </button>
+      <button class="topbar-btn topbar-btn-primary" onclick="toggleAiConcierge()" title="Open 24/7 AI Butler">
+        ⚜ Aura AI Butler
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="mainNavbar">
+    <div class="brand" onclick="switchView('welcome')">
+      <div class="brand-crest">⚜</div>
+      <div class="brand-info">
+        <h1>AURA GRAND</h1>
+        <span id="navResortSubtitle">Hotel & Residences</span>
+      </div>
+    </div>
+
+    <nav id="mainNav">
+      <ul class="nav-links" id="navLinksList">
+        <li class="mobile-nav-header" style="display: none;">
+          <div style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--gold-light);">⚜ AURA GRAND NAVIGATION</div>
+          <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close Navigation">✕</button>
+        </li>
+        <li><a class="nav-link active" id="nav-welcome" data-view="welcome">Hotel Overview</a></li>
+        <li><a class="nav-link" id="nav-rooms" data-view="user-dashboard" data-tab="user-rooms">Rooms & Suites</a></li>
+        <li><a class="nav-link" id="nav-vacant" data-view="user-dashboard" data-tab="user-vacant">Vacant Rooms</a></li>
+        <li><a class="nav-link" id="nav-services" data-view="user-dashboard" data-tab="user-services">Lavish Services</a></li>
+        <li><a class="nav-link" id="nav-guest-portal" data-view="user-dashboard" data-tab="user-stay">Guest Portal</a></li>
+        <li><a class="nav-link" id="nav-admin" data-view="admin-dashboard">Admin Authority</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Persona Wrapper with Interactive Dropdown -->
+      <div class="persona-wrapper">
+        <div class="persona-badge" id="personaBadge" onclick="togglePersonaDropdown(event)">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="persona-dropdown" id="personaDropdown">
+          <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+            <div style="font-size: 0.72rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700;">Active Session</div>
+            <div id="dropdownUserName" style="font-weight: 700; font-size: 1rem; color: #fff; margin-top: 2px;">Eleanor Vance</div>
+            <div id="dropdownUserRole" style="font-size: 0.78rem; color: var(--gold-primary);">Gold VIP Resident</div>
+            <div style="margin-top: 0.5rem; background: rgba(255,255,255,0.05); border-radius: var(--radius-sm); padding: 0.4rem 0.6rem; display: flex; justify-content: space-between; font-size: 0.76rem;">
+              <span>Loyalty Points:</span>
+              <strong style="color: var(--emerald);" id="dropdownLoyaltyPoints">4,850 pts</strong>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem;">Switch Portal Persona</div>
+            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <button class="btn btn-subtle btn-sm" style="justify-content: flex-start; text-align: left;" onclick="switchPersona('admin'); closePersonaDropdown();">
+                👑 <strong>Tamim Shadman</strong> (Admin Director)
+              </button>
+              <button class="btn btn-subtle btn-sm" style="justify-content: flex-start; text-align: left;" onclick="switchPersona('customer'); closePersonaDropdown();">
+                🛎️ <strong>Eleanor Vance</strong> (Gold VIP Guest)
+              </button>
+              <button class="btn btn-subtle btn-sm" style="justify-content: flex-start; text-align: left;" onclick="switchPersona('customer_fahim'); closePersonaDropdown();">
+                💎 <strong>Readuanul Fahim</strong> (Platinum VIP)
+              </button>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; display: flex; gap: 0.5rem;">
+            <button class="btn btn-outline btn-sm" style="flex: 1;" onclick="openModal('authModal'); closePersonaDropdown();">Custom Login</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-sm btn-nav-book" onclick="startBookingRoom('rm_501')">
+        Book a Suite
+      </button>
+
+      <!-- Mobile Navigation Hamburger Toggle -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" onclick="toggleMobileNav()">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="closeMobileNav()"></div>
+
+  <div class="app-wrapper">
+
+    <!-- =====================================================================
+         VIEW 1: WELCOME PAGE & HOTEL OVERVIEW (Page 2 & 4 Sitemap)
+         ===================================================================== -->
+    <main class="app-view active" id="welcome-view">
+      <!-- Hero Section -->
+      <section class="hero-section" style="background-image: url('/assets/images/hero_resort.jpg');">
+        <div class="hero-overlay"></div>
+        <canvas id="hero3dCanvas" class="hero-3d-canvas"></canvas>
+        <div class="hero-content">
+          <div class="hero-subtitle">
+            <span class="star-sparkle">★★★★★</span> Haute Hospitality &amp; Residences <span class="star-sparkle">★★★★★</span>
+          </div>
+          <h1 class="hero-title">WHERE <span class="gold-gleam-text">EXTRAORDINARY MOMENTS</span> BECOME TIMELESS</h1>
+          <p class="hero-description">
+            Welcome to Aura Grand. A private coastal sanctuary blending architectural brilliance with world-class personalized service, Michelin dining, restorative wellness, and bespoke penthouses.
+          </p>
+
+          <!-- Quick Search Bar Widget -->
+          <div class="search-widget">
+            <div class="search-field">
+              <label>📅 Check-in</label>
+              <input type="date" id="heroCheckIn" class="search-input" value="2026-10-18">
+            </div>
+            <div class="search-field">
+              <label>📅 Check-out</label>
+              <input type="date" id="heroCheckOut" class="search-input" value="2026-10-23">
+            </div>
+            <div class="search-field">
+              <label>👥 Guests</label>
+              <select id="heroGuests" class="search-input">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4+ Guests</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label>🏨 Suite Category</label>
+              <select id="heroSuiteType" class="search-input">
+                <option value="all">All Suites & Villas</option>
+                <option value="Presidential">Presidential Penthouse</option>
+                <option value="Deluxe">Deluxe Oceanfront</option>
+                <option value="Executive">Executive Suite</option>
+              </select>
+            </div>
+            <div>
+              <button class="btn btn-primary btn-lg" onclick="handleHeroSearch()" style="width: 100%; height: 48px; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem; font-weight: 700;">
+                Search Vacancy
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Persona Portal Cards -->
+          <div class="persona-cta-grid">
+            <div class="persona-cta-card" onclick="switchPersona('customer', 'user-dashboard')">
+              <div class="persona-icon">🛎️</div>
+              <div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.35rem;">Guest Experience Portal</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">
+                  Browse rooms, check real-time vacancy, reserve suites, order spa & dining, and manage express checkout.
+                </p>
+              </div>
+              <div style="color: var(--gold-primary); font-size: 0.88rem; font-weight: 700;">
+                Enter as Verified VIP Guest →
+              </div>
+            </div>
+
+            <div class="persona-cta-card" onclick="switchPersona('admin')">
+              <div class="persona-icon">👑</div>
+              <div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.35rem;">Admin Authority Dashboard</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">
+                  Manage hotel staff administration, customer directory, room status controls, billing invoices, and financial transactions.
+                </p>
+              </div>
+              <div style="color: var(--gold-primary); font-size: 0.88rem; font-weight: 700;">
+                Enter as Hotel Director (Admin) →
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Luxury Metrics Strip -->
+      <section class="container">
+        <div class="stats-strip">
+          <div class="stat-strip-item">
+            <div class="stat-value" id="heroOccupancyRate">65%</div>
+            <div class="stat-label">Current Occupancy Rate</div>
+          </div>
+          <div class="stat-strip-item">
+            <div class="stat-value" id="heroAvailableRooms">6</div>
+            <div class="stat-label">Vacant Luxury Suites</div>
+          </div>
+          <div class="stat-strip-item">
+            <div class="stat-value">5 ★</div>
+            <div class="stat-label">Forbes Travel Guide Rating</div>
+          </div>
+          <div class="stat-strip-item">
+            <div class="stat-value">24/7</div>
+            <div class="stat-label">White-Glove Butler Service</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Suites Showcase -->
+      <section class="container">
+        <div class="section-header">
+          <div class="section-pretitle">The Accommodation Collection</div>
+          <h2 class="section-title">FEATURED SUITES & RESIDENCES</h2>
+          <p class="section-subtitle">
+            Impeccably designed sanctuaries offering ocean panoramas, private terraces, bespoke marble furnishings, and supreme comfort.
+          </p>
+        </div>
+        <div class="room-grid" id="featuredRoomsList">
+          <!-- Populated by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <button class="btn btn-outline btn-lg" onclick="switchView('user-dashboard'); switchUserTab('user-rooms')">
+            Explore All 8 Suites & Penthouses
+          </button>
+        </div>
+      </section>
+
+      <!-- Lavish Hotel Amenities & Services Preview -->
+      <section class="container" style="padding-top: 4rem;">
+        <div class="section-header">
+          <div class="section-pretitle">Unrivaled Hospitality</div>
+          <h2 class="section-title">LAVISH SERVICES & EXPERIENCES</h2>
+          <p class="section-subtitle">
+            From Michelin-starred private in-suite dinners to the restorative Auric Wellness Spa and rooftop infinity cabanas.
+          </p>
+        </div>
+        <div class="services-grid" id="welcomeServicesList">
+          <!-- Populated by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <button class="btn btn-outline btn-lg" onclick="switchView('user-dashboard'); switchUserTab('user-services')">
+            Discover Full Services Menu
+          </button>
+        </div>
+      </section>
+
+      <!-- Verified Guest Reviews -->
+      <section class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <div class="section-header">
+          <div class="section-pretitle">Distinguished Acclaim</div>
+          <h2 class="section-title">WHAT OUR GUESTS SAY</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 2rem;">
+            <div style="color: var(--gold-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem; font-style: italic; margin-bottom: 1.25rem;">
+              "An absolute masterpiece of hospitality. The ocean sunrise from room 401 took our breath away. The staff treated us like royalty and the private dining was unforgettable."
+            </p>
+            <div style="font-weight: 700; color: var(--gold-light);">Eleanor Vance</div>
+            <div style="font-size: 0.78rem; color: var(--text-dim);">Gold VIP Patron • Azure Ocean Suite</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 2rem;">
+            <div style="color: var(--gold-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem; font-style: italic; margin-bottom: 1.25rem;">
+              "Hands down the highest level of luxury on the coastline. The rooftop infinity pool and private Maybach transfers made our anniversary extraordinary."
+            </p>
+            <div style="font-weight: 700; color: var(--gold-light);">Readuanul Fahim</div>
+            <div style="font-size: 0.78rem; color: var(--text-dim);">Platinum VIP Patron • Imperial Penthouse</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 2rem;">
+            <div style="color: var(--gold-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem; font-style: italic; margin-bottom: 1.25rem;">
+              "Peaceful, restorative, and spotless. The Himalayan hot stone massage at the Auric Spa melted away months of stress. Can not wait to return."
+            </p>
+            <div style="font-weight: 700; color: var(--gold-light);">Julian Hayes</div>
+            <div style="font-size: 0.78rem; color: var(--text-dim);">Silver VIP Patron • Lagoon Deluxe</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================================
+         VIEW 2: USER DASHBOARD (Page 3 of PDF)
+         Features: Room Selection, Vacant Rooms, Other Services, Booking, Checkout
+         ===================================================================== -->
+    <main class="app-view" id="user-dashboard-view">
+      <div class="container">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+          <div class="dash-user-info">
+            <div class="persona-avatar" style="width: 60px; height: 60px; font-size: 1.8rem; background: var(--gold-gradient); display: flex; align-items: center; justify-content: center; color: #000; font-weight: 800;">
+              🛎️
+            </div>
+            <div>
+              <span class="badge badge-gold">Guest Experience Portal</span>
+              <h2 style="font-size: 1.8rem; margin-top: 0.25rem;">Aura Grand Resident Experience</h2>
+              <div style="color: var(--text-muted); font-size: 0.88rem;">Select rooms, monitor vacancy, reserve services, and process checkout.</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-outline btn-sm" onclick="switchPersona('admin')">Switch to Admin Portal</button>
+            <button class="btn btn-primary btn-sm" onclick="switchUserTab('user-book')">Make New Reservation</button>
+          </div>
+        </div>
+
+        <!-- Subnav Tabs -->
+        <div class="subnav-tabs">
+          <button class="subnav-tab active" data-tab="user-stay">🔑 My Active Stay & Key</button>
+          <button class="subnav-tab" data-tab="user-rooms">🏨 1. Room Selection</button>
+          <button class="subnav-tab" data-tab="user-vacant">🟢 2. Vacant Rooms</button>
+          <button class="subnav-tab" data-tab="user-services">✨ 3. Other Services</button>
+          <button class="subnav-tab" data-tab="user-book">📝 4. Booking</button>
+          <button class="subnav-tab" data-tab="user-checkout">💳 5. Checkout</button>
+        </div>
+
+        <!-- Tab 1: My Stay -->
+        <section class="tab-pane active" id="user-stay-pane">
+          <div id="userStayDetails">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <!-- Tab 2: Room Selection (PDF Feature 1) -->
+        <section class="tab-pane" id="user-rooms-pane">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+              <div>
+                <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700; display: block; margin-bottom: 0.35rem;">Category</label>
+                <select id="userRoomTypeFilter" class="form-control" style="width: 180px;">
+                  <option value="all">All Suite Types</option>
+                  <option value="Presidential">Presidential Penthouse</option>
+                  <option value="Deluxe">Deluxe Oceanfront</option>
+                  <option value="Executive">Executive Suite</option>
+                  <option value="Classic">Classic Room</option>
+                  <option value="Family">Family Suite</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700; display: block; margin-bottom: 0.35rem;">Guests</label>
+                <select id="userRoomCapacityFilter" class="form-control" style="width: 140px;">
+                  <option value="1">1+ Guests</option>
+                  <option value="2">2+ Guests</option>
+                  <option value="3">3+ Guests</option>
+                  <option value="4">4+ Guests</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700; display: block; margin-bottom: 0.35rem;">Max Nightly Rate: <span id="userPriceFilterLabel">$2000</span></label>
+                <input type="range" id="userRoomPriceFilter" min="200" max="2000" step="50" value="2000" style="width: 180px;">
+              </div>
+            </div>
+            <div>
+              <span class="badge badge-gold" id="userRoomCountBadge">8 Luxury Suites Available</span>
+            </div>
+          </div>
+          <div class="room-grid" id="userRoomsGrid">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <!-- Tab 3: Vacant Rooms Matrix (PDF Feature 2) -->
+        <section class="tab-pane" id="user-vacant-pane">
+          <div class="vacancy-dashboard">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                  <span class="badge badge-emerald">Real-Time Vacancy Intelligence</span>
+                  <span class="badge badge-gold">✦ 3D Architectural Twin Enabled</span>
+                </div>
+                <h3 style="font-size: 1.6rem; margin-top: 0.35rem;">Architectural Resort Twin & Availability</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Inspect real-time suite occupancy in 3D WebGL or traditional 2D floor plans across all 5 hotel floors.</p>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <div class="view-mode-toggle">
+                  <button class="view-mode-btn active" id="btnToggle3D" onclick="toggleVacancyViewMode('3d')">
+                    🏢 3D Architectural Model
+                  </button>
+                  <button class="view-mode-btn" id="btnToggle2D" onclick="toggleVacancyViewMode('2d')">
+                    🟢 2D Floor Plan Grid
+                  </button>
+                </div>
+                <span class="badge badge-gold" id="vacantCountBadge" style="font-size: 0.88rem; padding: 0.4rem 1rem;">
+                  Calculating Vacancy...
+                </span>
+              </div>
+            </div>
+
+            <!-- Date Selectors for Vacancy Check -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; background: rgba(15,23,42,0.5); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+              <div>
+                <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700; display: block; margin-bottom: 0.35rem;">Check-in Date</label>
+                <input type="date" id="vacantCheckIn" class="form-control" value="2026-10-18">
+              </div>
+              <div>
+                <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700; display: block; margin-bottom: 0.35rem;">Check-out Date</label>
+                <input type="date" id="vacantCheckOut" class="form-control" value="2026-10-23">
+              </div>
+              <div>
+                <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700; display: block; margin-bottom: 0.35rem;">Party Size</label>
+                <select id="vacantGuests" class="form-control">
+                  <option value="1">1 Guest</option>
+                  <option value="2" selected>2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4+ Guests</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Novel Feature: 3D Architectural Resort Tower Digital Twin Viewport -->
+            <div id="vacant3dSection" class="three-tower-wrapper">
+              <div class="tower-hud-controls">
+                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                  <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-light); text-transform: uppercase; margin-right: 0.25rem;">Isolate Floor:</span>
+                  <button class="floor-pill-btn active" onclick="Aura3D.focusFloor('all')">All Floors</button>
+                  <button class="floor-pill-btn" onclick="Aura3D.focusFloor(5)">L5: Penthouse & Heli</button>
+                  <button class="floor-pill-btn" onclick="Aura3D.focusFloor(4)">L4: Executive</button>
+                  <button class="floor-pill-btn" onclick="Aura3D.focusFloor(3)">L3: Deluxe Ocean</button>
+                  <button class="floor-pill-btn" onclick="Aura3D.focusFloor(2)">L2: Classic</button>
+                  <button class="floor-pill-btn" onclick="Aura3D.focusFloor(1)">L1: Auric Spa</button>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                  <button class="btn btn-outline btn-xs" id="btnExplodeTower" onclick="Aura3D.toggleTowerExplode()">
+                    💥 Explode 3D Floors
+                  </button>
+                  <button class="btn btn-outline btn-xs" onclick="Aura3D.openSpatialTour('penthouse')">
+                    ✦ 360° Spatial VR
+                  </button>
+                </div>
+              </div>
+
+              <!-- 3D WebGL Canvas Viewport -->
+              <div id="threeTowerContainer" style="width: 100%; height: 480px; position: relative; cursor: grab;">
+                <!-- Three.js Canvas Injected Here -->
+              </div>
+
+              <!-- Real-time Floor Telemetry Card -->
+              <div id="towerFloorDetails" style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-subtle); background: rgba(10, 14, 23, 0.75);">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.84rem; color: var(--text-muted); flex-wrap: wrap; gap: 0.5rem;">
+                  <div>💡 <strong>Interactive Hint:</strong> Click & drag to rotate tower in 3D • Scroll to zoom • Glowing green cubes indicate available vacant suites.</div>
+                  <div style="display: flex; gap: 1rem;">
+                    <span><strong style="color: #10b981;">●</strong> Available Pod</span>
+                    <span><strong style="color: #ffd700;">●</strong> Occupied Suite</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floor Plan Matrix (2D Fallback) -->
+            <div class="floor-plan-matrix" id="vacantRoomsMatrix" style="display: none;">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 4: Other Services (PDF Feature 3) -->
+        <section class="tab-pane" id="user-services-pane">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h3 style="font-size: 1.6rem;">Lavish Hotel Services & Amenities</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Elevate your stay with signature culinary dishes, wellness treatments, and private transfers.</p>
+            </div>
+            <div>
+              <select id="userServicesCategoryFilter" class="form-control" onchange="renderUserServicesList()" style="width: 220px;">
+                <option value="all">All Service Categories</option>
+                <option value="Wellness & Spa">Wellness & Spa</option>
+                <option value="Fine Dining & Bar">Fine Dining & Bar</option>
+                <option value="Leisure & Pool">Leisure & Pool</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Guest Care">Guest Care</option>
+              </select>
+            </div>
+          </div>
+          <!-- Novel Feature: Private Aviation & Superyacht Fleet Showcase Banner -->
+          <div style="background: linear-gradient(135deg, rgba(20, 29, 47, 0.95) 0%, rgba(10, 14, 23, 0.95) 100%); border: 1.5px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2.5rem; position: relative; overflow: hidden;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+              <div>
+                <span class="badge badge-gold">✦ Bespoke Mobility Concierge</span>
+                <h3 style="font-size: 1.6rem; color: #fff; margin-top: 0.35rem;">Private Superyacht & Aviation Fleet</h3>
+                <p style="color: var(--text-dim); font-size: 0.88rem; margin: 0;">
+                  Charter our 88ft Sunseeker Superyacht, Airbus ACH130 helicopter from our 52nd-floor rooftop helipad, or chauffeur-driven Rolls-Royce Phantom VIII.
+                </p>
+              </div>
+              <button class="btn btn-primary" onclick="openFleetManifestModal('fleet_yacht')">
+                🛥️ Dispatch Fleet Charter Manifest
+              </button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+              <!-- Card 1: Superyacht -->
+              <div class="service-card" style="margin: 0;">
+                <div class="service-image-wrap" style="height: 180px;">
+                  <img src="/assets/images/superyacht_charter.jpg" alt="Sunseeker Superyacht" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+                  <span class="service-price-tag">$4,500 / 4-hr</span>
+                </div>
+                <div class="service-card-body" style="padding: 1.25rem;">
+                  <span class="badge badge-gold" style="font-size: 0.7rem;">Maritime Sovereign</span>
+                  <h4 style="font-size: 1.1rem; color: #fff; margin: 0.35rem 0;">Sunseeker 88ft Superyacht</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-dim); line-height: 1.5;">Upper deck jacuzzi, Seabob watercraft, private sushi master, and Dom Pérignon bar.</p>
+                  <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 0.85rem;" onclick="openFleetManifestModal('fleet_yacht')">Reserve Yacht Charter →</button>
+                </div>
+              </div>
+
+              <!-- Card 2: Helicopter -->
+              <div class="service-card" style="margin: 0;">
+                <div class="service-image-wrap" style="height: 180px;">
+                  <img src="/assets/images/helicopter_transfer.jpg" alt="VIP Rooftop Helicopter" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+                  <span class="service-price-tag">$1,850 / flight</span>
+                </div>
+                <div class="service-card-body" style="padding: 1.25rem;">
+                  <span class="badge badge-indigo" style="font-size: 0.7rem;">Rooftop Helipad</span>
+                  <h4 style="font-size: 1.1rem; color: #fff; margin: 0.35rem 0;">Airbus ACH130 VIP Shuttle</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-dim); line-height: 1.5;">Direct 52nd-floor rooftop helipad airport transfer with Hermès leather cabin and Bose headsets.</p>
+                  <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 0.85rem;" onclick="openFleetManifestModal('fleet_heli')">Book Heli-Transfer →</button>
+                </div>
+              </div>
+
+              <!-- Card 3: Rolls-Royce -->
+              <div class="service-card" style="margin: 0;">
+                <div class="service-image-wrap" style="height: 180px;">
+                  <img src="/assets/images/executive_suite.jpg" alt="Rolls-Royce Phantom VIII" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+                  <span class="service-price-tag">$650 / day</span>
+                </div>
+                <div class="service-card-body" style="padding: 1.25rem;">
+                  <span class="badge badge-emerald" style="font-size: 0.7rem;">White-Glove Saloon</span>
+                  <h4 style="font-size: 1.1rem; color: #fff; margin: 0.35rem 0;">Rolls-Royce Phantom VIII</h4>
+                  <p style="font-size: 0.82rem; color: var(--text-dim); line-height: 1.5;">Whisper-quiet V12 engine, starlight headliner, and dedicated 24/7 personal chauffeur.</p>
+                  <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 0.85rem;" onclick="openFleetManifestModal('fleet_phantom')">Schedule Chauffeur →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="services-grid" id="userServicesGrid">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <!-- Tab 5: Booking Reservation Center (PDF Feature 4) -->
+        <section class="tab-pane" id="user-book-pane">
+          <div style="max-width: 900px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-luxury);">
+            <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.5rem; margin-bottom: 2rem;">
+              <span class="badge badge-gold">Reservation Concierge</span>
+              <h2 style="font-size: 1.8rem; margin-top: 0.35rem;">Reserve Your Suite at Aura Grand</h2>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Instant confirmation with guaranteed luxury amenities, best rate assurance, and flexible cancellation.</p>
+            </div>
+
+            <form id="bookingForm">
+              <!-- Step 1: Suite & Dates -->
+              <h4 style="font-size: 1rem; color: var(--gold-light); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.08em;">1. Suite & Stay Dates</h4>
+              <div class="form-group">
+                <label>Select Suite or Penthouse</label>
+                <select id="bookingRoomSelect" class="form-control" required>
+                  <option value="">-- Choose a Suite --</option>
+                  <!-- Populated dynamically -->
+                </select>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Check-in Date</label>
+                  <input type="date" id="bookCheckIn" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Check-out Date</label>
+                  <input type="date" id="bookCheckOut" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Guests</label>
+                  <select id="bookGuests" class="form-control">
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Step 2: Add-on Lavish Services -->
+              <h4 style="font-size: 1rem; color: var(--gold-light); margin: 2rem 0 1rem; text-transform: uppercase; letter-spacing: 0.08em;">2. Add Lavish Services to Stay</h4>
+              <div id="bookingAddonServices" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem; margin-bottom: 2rem;">
+                <!-- Populated dynamically -->
+              </div>
+
+              <!-- Step 3: Guest Information -->
+              <h4 style="font-size: 1rem; color: var(--gold-light); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.08em;">3. Primary Guest Details</h4>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" id="bookGuestName" class="form-control" placeholder="Eleanor Vance" required>
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input type="email" id="bookGuestEmail" class="form-control" placeholder="guest@auragrand.com" required>
+                </div>
+                <div class="form-group">
+                  <label>Contact Phone</label>
+                  <input type="tel" id="bookGuestPhone" class="form-control" placeholder="+1 (555) 234-5678">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Special Requests / Dietary / Pillow Preferences</label>
+                <input type="text" id="bookSpecialRequests" class="form-control" placeholder="E.g. High floor, anniversary champagne, non-feather pillows">
+              </div>
+
+              <!-- Step 4: Promo Code & Payment Simulation -->
+              <div class="form-grid" style="margin-top: 1.5rem;">
+                <div class="form-group">
+                  <label>Privilege Promo Code</label>
+                  <input type="text" id="bookPromoCode" class="form-control" placeholder="Try: ROYAL10 or WELCOME15">
+                </div>
+                <div class="form-group">
+                  <label>Payment Method</label>
+                  <select id="bookPaymentMethod" class="form-control">
+                    <option value="Credit Card (Instant Guarantee)">Credit Card (Visa / Mastercard)</option>
+                    <option value="Amex Centurion / Platinum">Amex Centurion / Platinum</option>
+                    <option value="Apple Pay / Digital Wallet">Apple Pay / Digital Wallet</option>
+                    <option value="Pay Upon Arrival at Concierge">Pay Upon Arrival at Concierge</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="margin: 1rem 0;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.88rem; color: var(--text-muted);">
+                  <input type="checkbox" id="bookAutoCheckIn" checked>
+                  <span>Auto check-in (Instantly issue digital room key)</span>
+                </label>
+              </div>
+
+              <!-- Cost Summary -->
+              <div style="background: rgba(15,23,42,0.8); border: 1px solid var(--border-gold); border-radius: var(--radius-sm); padding: 1.5rem; margin: 2rem 0;" id="bookingCostSummary">
+                <!-- Calculated dynamically -->
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                Confirm & Guarantee Reservation
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Tab 6: Checkout (PDF Feature 5) -->
+        <section class="tab-pane" id="user-checkout-pane">
+          <div id="checkoutContainer">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- =====================================================================
+         VIEW 3: ADMIN DASHBOARD (Page 3 of PDF)
+         Features: Employee Management, Customer Management, Billing
+         ===================================================================== -->
+    <main class="app-view" id="admin-dashboard-view">
+      <div class="container">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+          <div class="dash-user-info">
+            <div class="persona-avatar" style="width: 60px; height: 60px; font-size: 1.8rem; background: var(--gold-gradient); display: flex; align-items: center; justify-content: center; color: #000; font-weight: 800;">
+              👑
+            </div>
+            <div>
+              <span class="badge badge-gold">Hotel Authority Control</span>
+              <h2 style="font-size: 1.8rem; margin-top: 0.25rem;">Executive Management Operations</h2>
+              <div style="color: var(--text-muted); font-size: 0.88rem;">Overseeing staff, customer profiles, room rates, transactions, and billing.</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-outline btn-sm" onclick="switchPersona('customer')">Switch to Guest View</button>
+            <button class="btn btn-primary btn-sm" onclick="openAddEmployeeModal()">+ Add Staff Member</button>
+          </div>
+        </div>
+
+        <!-- Subnav Tabs -->
+        <div class="subnav-tabs">
+          <button class="subnav-tab active" data-tab="admin-overview">📊 Executive Overview</button>
+          <button class="subnav-tab" data-tab="admin-employees">👔 1. Employee Management</button>
+          <button class="subnav-tab" data-tab="admin-customers">👥 2. Customer Management</button>
+          <button class="subnav-tab" data-tab="admin-billing">💰 3. Billing & Financials</button>
+          <button class="subnav-tab" data-tab="admin-rooms">🛏️ Room Status Control</button>
+          <button class="subnav-tab" data-tab="admin-night-audit">🌙 4. Night Audit & RevPAR</button>
+          <button class="subnav-tab" data-tab="admin-yield">📈 5. Yield & Dynamic Surge</button>
+          <button class="subnav-tab" data-tab="admin-channels">🌐 6. GDS & Distribution</button>
+          <button class="subnav-tab" data-tab="admin-audit">🛡️ 7. SOC-2 Audit Trail</button>
+        </div>
+
+        <!-- Tab 1: Executive Overview -->
+        <section class="tab-pane active" id="admin-overview-pane">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-emerald">Total Settled</span>
+                <div class="kpi-value" id="adminKpiRevenue">$0</div>
+                <div class="kpi-sub">Total Hotel Revenue to Date</div>
+              </div>
+              <div style="font-size: 2.5rem;">💵</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-gold">Occupancy</span>
+                <div class="kpi-value" id="adminKpiOccupancy">0%</div>
+                <div class="kpi-sub">Real-Time Suite Occupancy</div>
+              </div>
+              <div style="font-size: 2.5rem;">📈</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-indigo">Staff Operations</span>
+                <div class="kpi-value" id="adminKpiStaff">0 / 0</div>
+                <div class="kpi-sub">Active Staff on Duty Today</div>
+              </div>
+              <div style="font-size: 2.5rem;">👔</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-amber">Active Stays</span>
+                <div class="kpi-value" id="adminKpiBookings">0</div>
+                <div class="kpi-sub">In-House Resident Bookings</div>
+              </div>
+              <div style="font-size: 2.5rem;">🛎️</div>
+            </div>
+          </div>
+
+          <!-- Executive Analytics & Revenue Trend Chart -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <div>
+                <span class="badge badge-gold">Financial Intelligence</span>
+                <h3 style="font-size: 1.35rem; margin-top: 0.35rem;">Revenue & Performance Trajectory</h3>
+                <div style="font-size: 0.8rem; color: var(--text-dim);">Historical revenue performance and occupancy rates (May - Current)</div>
+              </div>
+              <div style="display: flex; gap: 0.75rem;">
+                <button class="btn btn-outline btn-sm" onclick="dispatchAllHousekeeping()">
+                  🧹 Dispatch Housekeeping
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="exportFinancialAudit('csv')">
+                  📥 Export Folios (CSV)
+                </button>
+              </div>
+            </div>
+            <div class="chart-bars-wrap" id="revenueTrendChart">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Room Status Grid & Real-time Activity Audit Logs -->
+          <div style="display: grid; grid-template-columns: 2fr 1.2fr; gap: 2rem; margin-bottom: 2.5rem;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="font-size: 1.3rem;">Real-Time Suite Status Grid</h3>
+                <span style="font-size: 0.8rem; color: var(--text-dim);">Live Housekeeping & Front Desk Sync</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;" id="adminRoomStatusGrid">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <div>
+              <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.5rem;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                  <span>Recent Bookings Feed</span>
+                  <span class="badge badge-emerald">Live</span>
+                </h3>
+                <div id="adminRecentBookings">
+                  <!-- Populated dynamically -->
+                </div>
+              </div>
+
+              <!-- Real-time Activity Audit Trail -->
+              <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                  <span>Hotel Activity Audit Trail</span>
+                  <span class="badge badge-indigo">Security</span>
+                </h3>
+                <div class="activity-log-feed" id="adminActivityLogFeed">
+                  <!-- Populated dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 2: Employee Management (PDF Feature 1) -->
+        <section class="tab-pane" id="admin-employees-pane">
+          <div class="table-card">
+            <div class="table-toolbar">
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <input type="text" id="adminEmployeeSearch" class="table-search-input" placeholder="🔍 Search staff by name, role, ID...">
+                <select id="adminEmployeeDeptFilter" class="form-control" style="width: 170px;">
+                  <option value="all">All Departments</option>
+                  <option value="Front Desk">Front Desk</option>
+                  <option value="Food & Beverage">Food & Beverage</option>
+                  <option value="Housekeeping">Housekeeping</option>
+                  <option value="Concierge & VIP">Concierge & VIP</option>
+                  <option value="Wellness & Spa">Wellness & Spa</option>
+                  <option value="Security & Safety">Security & Safety</option>
+                  <option value="Management & Finance">Management & Finance</option>
+                  <option value="Engineering & Maintenance">Engineering</option>
+                </select>
+                <select id="adminEmployeeShiftFilter" class="form-control" style="width: 150px;">
+                  <option value="all">All Shifts</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Evening">Evening</option>
+                  <option value="Night">Night</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" onclick="openAddEmployeeModal()">+ Add New Staff</button>
+            </div>
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Staff ID</th>
+                    <th>Full Name & Email</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Shift Hours</th>
+                    <th>Monthly Salary</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminEmployeeTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 3: Customer Management (PDF Feature 2) -->
+        <section class="tab-pane" id="admin-customers-pane">
+          <div class="table-card">
+            <div class="table-toolbar">
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <input type="text" id="adminCustomerSearch" class="table-search-input" placeholder="🔍 Search guest by name, email, phone...">
+                <select id="adminCustomerTierFilter" class="form-control" style="width: 170px;">
+                  <option value="all">All VIP Tiers</option>
+                  <option value="Platinum">Platinum VIP</option>
+                  <option value="Gold">Gold VIP</option>
+                  <option value="Silver">Silver VIP</option>
+                </select>
+              </div>
+              <span class="badge badge-gold">VIP Guest CRM Records</span>
+            </div>
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Guest Profile</th>
+                    <th>VIP Tier</th>
+                    <th>History</th>
+                    <th>Lifetime Revenue</th>
+                    <th>Current Status</th>
+                    <th>Special Preferences</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminCustomerTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 4: Billing & Transactions (PDF Feature 3) -->
+        <section class="tab-pane" id="admin-billing-pane">
+          <div class="table-card">
+            <div class="table-toolbar">
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <input type="text" id="adminBillingSearch" class="table-search-input" placeholder="🔍 Search by invoice #, guest, room...">
+                <select id="adminBillingStatusFilter" class="form-control" style="width: 150px;">
+                  <option value="all">All Statuses</option>
+                  <option value="Paid">Paid</option>
+                  <option value="Pending">Pending</option>
+                </select>
+              </div>
+              <span class="badge badge-emerald">Audited Financial Folios</span>
+            </div>
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Billed Guest</th>
+                    <th>Room #</th>
+                    <th>Date</th>
+                    <th>Total Billed</th>
+                    <th>Payment Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminBillingTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 5: Room Operations -->
+        <section class="tab-pane" id="admin-rooms-pane">
+          <div class="table-card">
+            <div class="table-toolbar">
+              <h3 style="font-size: 1.1rem;">Suite Inventory & Nightly Rate Management</h3>
+              <span class="badge badge-gold">Authority Control</span>
+            </div>
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Room #</th>
+                    <th>Name & Type</th>
+                    <th>Nightly Rate</th>
+                    <th>Capacity</th>
+                    <th>Operational Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminRoomsTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 5: Night Audit & Yield Optimization (Enterprise Feature) -->
+        <section class="tab-pane" id="admin-night-audit-pane">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="badge badge-gold">Financial Intelligence</span>
+              <h2 style="font-size: 1.8rem; margin-top: 0.35rem;">Daily Night Audit & RevPAR Reconciliation</h2>
+              <p style="color: var(--text-muted); font-size: 0.88rem;">Automated closing of day accounts, room charge posting, ancillary reconciliation, and ADR analysis.</p>
+            </div>
+            <button class="btn btn-primary btn-lg" onclick="executeNightAudit()">
+              🌙 Run Automated Night Audit
+            </button>
+          </div>
+
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-emerald">RevPAR</span>
+                <div class="kpi-value" id="auditKpiRevPar">$609</div>
+                <div class="kpi-sub">Revenue Per Available Room</div>
+              </div>
+              <div style="font-size: 2.5rem;">📊</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-gold">ADR</span>
+                <div class="kpi-value" id="auditKpiAdr">$1,218</div>
+                <div class="kpi-sub">Average Daily Rate (Sold Rooms)</div>
+              </div>
+              <div style="font-size: 2.5rem;">📈</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-indigo">ALOS</span>
+                <div class="kpi-value" id="auditKpiAlos">2.5</div>
+                <div class="kpi-sub">Average Length of Stay (Nights)</div>
+              </div>
+              <div style="font-size: 2.5rem;">⏳</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-amber">30-Day Projected GOP</span>
+                <div class="kpi-value" id="auditKpiGop">$146,160</div>
+                <div class="kpi-sub">Gross Operating Profit Forecast</div>
+              </div>
+              <div style="font-size: 2.5rem;">💎</div>
+            </div>
+          </div>
+
+          <div class="table-card">
+            <div class="table-toolbar">
+              <h3 style="font-size: 1.15rem; color: var(--gold-light);">Daily Closing Balances & Ledger Reconciliation</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Ledger Category</th>
+                    <th>Transactions Posted</th>
+                    <th>Subtotal</th>
+                    <th>Taxes & City Tourism (10%)</th>
+                    <th>Net Closing Amount</th>
+                    <th>Reconciliation Status</th>
+                  </tr>
+                </thead>
+                <tbody id="nightAuditLedgerBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 7: Dynamic Revenue Yield & Surge Pricing Engine -->
+        <section class="tab-pane" id="admin-yield-pane">
+          <div class="kpi-grid" style="margin-bottom: 2rem;">
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-gold">Active Yield Rate</span>
+                <div class="kpi-value" id="yieldCurrentMultiplier">1.15x</div>
+                <div class="kpi-sub">Active Surge Multiplier</div>
+              </div>
+              <div style="font-size: 2.2rem;">📈</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-emerald">Simulated Rev Lift</span>
+                <div class="kpi-value" id="yieldAnnualLift">+$184,200</div>
+                <div class="kpi-sub">Projected Annual GOP Lift</div>
+              </div>
+              <div style="font-size: 2.2rem;">💰</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-indigo">Auto Occupancy Trigger</span>
+                <div class="kpi-value" id="yieldAutoTriggerStatus">ACTIVE (&gt;75%)</div>
+                <div class="kpi-sub">+15% Auto-Surge Rule</div>
+              </div>
+              <div style="font-size: 2.2rem;">⚡</div>
+            </div>
+            <div class="kpi-card">
+              <div>
+                <span class="badge badge-gold">Gala Event Surge</span>
+                <div class="kpi-value" id="yieldEventStatus" style="font-size: 1.3rem;">Standard Rate</div>
+                <div class="kpi-sub">Special Event Multiplier</div>
+              </div>
+              <div style="font-size: 2.2rem;">🥂</div>
+            </div>
+          </div>
+
+          <!-- Yield Strategy Controls Card -->
+          <div class="table-card" style="margin-bottom: 2rem; padding: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <h3 style="font-size: 1.3rem; color: var(--gold-light);">Algorithmic Yield & Surge Pricing Console</h3>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.25rem;">
+                  Dynamically adjust Average Daily Rate (ADR) based on real-time occupancy triggers, weekend premiums, and VIP high-season events.
+                </p>
+              </div>
+              <button class="btn btn-primary" onclick="saveYieldConfiguration()">
+                ⚡ Deploy Yield Multipliers Across Inventory
+              </button>
+            </div>
+
+            <div class="form-grid" style="gap: 1.5rem;">
+              <div class="form-group">
+                <label style="display: flex; justify-content: space-between;">
+                  <span>Base Surge Multiplier: <strong id="sliderMultiplierVal" style="color: var(--gold-primary);">1.15x</strong></span>
+                  <span style="font-size: 0.76rem; color: var(--text-dim);">(1.0x Standard — 2.5x Max)</span>
+                </label>
+                <input type="range" id="yieldMultiplierInput" min="1.0" max="2.5" step="0.05" value="1.15" class="yield-slider" oninput="updateYieldSliderDisplay(this.value)">
+              </div>
+
+              <div class="form-group">
+                <label>VIP Event / High-Season Gala Multiplier</label>
+                <select id="yieldEventSelect" class="form-control" onchange="previewYieldRates()">
+                  <option value="None">None (Regular Season)</option>
+                  <option value="Monaco Grand Prix Weekend">Monaco Grand Prix Weekend (+35%)</option>
+                  <option value="Paris Haute Couture Gala">Paris Haute Couture Gala (+40%)</option>
+                  <option value="Art Basel & Yacht Show">Art Basel & Yacht Show (+30%)</option>
+                  <option value="New Year Private Countdown">New Year Private Countdown (+50%)</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+              <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.9rem;">
+                <input type="checkbox" id="yieldWeekendToggle" checked onchange="previewYieldRates()">
+                <span>Apply Friday/Saturday Weekend Surge (+20% on ADR)</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.9rem;">
+                <input type="checkbox" id="yieldOccupancyToggle" checked onchange="previewYieldRates()">
+                <span>Automatic Occupancy-Triggered Surge (&gt;75% Occupancy auto +15%)</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.9rem;">
+                <input type="checkbox" id="yieldAiAutoToggle" checked>
+                <span>AI Autonomous RevPAR Maximizer (24/7 Yield Monitoring)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Dynamic Rate Matrix Table -->
+          <div class="table-card">
+            <div class="table-toolbar">
+              <h3 style="font-size: 1.15rem; color: var(--gold-light);">Real-Time Dynamic Suite Pricing Matrix</h3>
+              <span class="badge badge-emerald">Live Calculated Rates</span>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Room #</th>
+                    <th>Suite Collection</th>
+                    <th>Standard Base Rate</th>
+                    <th>Active Dynamic Surge Rate</th>
+                    <th>Yield Lift (%)</th>
+                    <th>Inventory Status</th>
+                  </tr>
+                </thead>
+                <tbody id="yieldRatesTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 8: GDS & Direct Channel Distribution -->
+        <section class="tab-pane" id="admin-channels-pane">
+          <!-- Channel Parity & Margin Hero -->
+          <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(10, 14, 23, 0.9) 100%); border: 1.5px solid var(--emerald); border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+            <div>
+              <span class="badge badge-emerald">Direct Booking Margin Optimizer</span>
+              <h3 style="font-size: 1.6rem; color: #fff; margin-top: 0.35rem;">$18,450 Commission Saved This Month</h3>
+              <p style="font-size: 0.88rem; color: var(--text-dim); margin-top: 0.25rem;">
+                74% of reservations booked directly through Aura Sovereign Engine, saving substantial OTA intermediary fees.
+              </p>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="text-align: right;">
+                <div style="font-size: 0.72rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700;">Inventory Parity</div>
+                <div style="font-size: 1rem; font-weight: 800; color: #34d399;">100% Synced (All OTAs)</div>
+              </div>
+              <button class="btn btn-primary" id="btnForceChannelSync" onclick="forceChannelPushSync()">
+                🔄 Force Push 2-Way GDS Sync
+              </button>
+            </div>
+          </div>
+
+          <!-- Channel Distribution Cards -->
+          <div class="channel-grid" id="channelDistributionGrid">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- GDS Synchronization Activity -->
+          <div class="table-card" style="margin-top: 2rem;">
+            <div class="table-toolbar">
+              <h3 style="font-size: 1.15rem; color: var(--gold-light);">Global Distribution Protocol & Connectivity Status</h3>
+              <div style="font-size: 0.8rem; color: var(--text-dim);" id="gdsSyncTimestamp">
+                Last Global Handshake: Just now
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Distribution Partner</th>
+                    <th>Channel Category</th>
+                    <th>Commission</th>
+                    <th>Monthly Revenue</th>
+                    <th>Channel Share</th>
+                    <th>Sync Protocol & Latency</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="channelsTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 9: SOC-2 Security & Immutable Audit Trail -->
+        <section class="tab-pane" id="admin-audit-pane">
+          <div class="table-card">
+            <div class="table-toolbar">
+              <div>
+                <h3 style="font-size: 1.25rem; color: var(--gold-light);">SOC-2 Type II & PCI-DSS Immutable Security Ledger</h3>
+                <p style="font-size: 0.82rem; color: var(--text-dim); margin-top: 0.2rem;">
+                  Cryptographically hashed audit log recording staff actions, guest folios, rate adjustments, and bank night audits.
+                </p>
+              </div>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <input type="text" id="auditSearchInput" class="table-search-input" placeholder="Search actor or action..." oninput="filterAuditTrail(this.value)">
+                <button class="btn btn-outline btn-sm" onclick="exportAuditTrail('csv')">Export CSV</button>
+                <button class="btn btn-outline btn-sm" onclick="exportAuditTrail('json')">Export JSON</button>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>Action Code</th>
+                    <th>Operator / Actor</th>
+                    <th>Event Description</th>
+                    <th>SHA-256 Checksum Preview</th>
+                    <th>Compliance</th>
+                  </tr>
+                </thead>
+                <tbody id="auditTrailTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="luxury-footer">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-crest" style="margin-bottom: 1rem;">⚜</div>
+          <h3 style="color: var(--gold-light); font-size: 1.3rem;">AURA GRAND</h3>
+          <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.5rem;">
+            A premier five-star luxury resort and residence management platform. Engineered for seamless guest experiences and operational excellence.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: var(--gold-primary); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem;">Quick Navigation</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; color: var(--text-muted);">
+            <li><a style="color: inherit; text-decoration: none; cursor: pointer;" onclick="switchView('welcome')">Hotel Overview</a></li>
+            <li><a style="color: inherit; text-decoration: none; cursor: pointer;" onclick="switchView('user-dashboard'); switchUserTab('user-rooms')">Browse Suites</a></li>
+            <li><a style="color: inherit; text-decoration: none; cursor: pointer;" onclick="switchView('user-dashboard'); switchUserTab('user-vacant')">Vacant Room Map</a></li>
+            <li><a style="color: inherit; text-decoration: none; cursor: pointer;" onclick="switchView('user-dashboard'); switchUserTab('user-services')">Lavish Services</a></li>
+            <li><a style="color: inherit; text-decoration: none; cursor: pointer;" onclick="switchView('admin-dashboard')">Admin Authority</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--gold-primary); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem;">Development Team</h4>
+          <div style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.8;">
+            Tamim Shadman<br>
+            Readuanul Farid Fahim
+          </div>
+        </div>
+        <div>
+          <h4 style="color: var(--gold-primary); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem;">Concierge Desk</h4>
+          <div style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            100 Ocean Crest Boulevard<br>
+            Direct: +1 (555) 019-2800<br>
+            Email: concierge@auragrand.com<br>
+            Open 24 Hours / 7 Days
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; border-top: 1px solid var(--border-subtle); margin-top: 3rem; padding-top: 1.5rem; font-size: 0.78rem; color: var(--text-dim);">
+        © 2026 Aura Grand Hotel & Residences. All Rights Reserved. Built to Production Grade Specifications.
+      </div>
+    </footer>
+  </div>
+
+  <!-- =====================================================================
+       MODALS & DIALOGUES
+       ===================================================================== -->
+
+  <!-- 1. Room Details Modal -->
+  <div class="modal-overlay" id="roomDetailsModal">
+    <div class="modal-card lg">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Suite Details</h3>
+        <button class="modal-close" onclick="closeModal('roomDetailsModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="roomDetailsModalContent">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Service Order Modal -->
+  <div class="modal-overlay" id="serviceOrderModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Order Lavish Experience</h3>
+        <button class="modal-close" onclick="closeModal('serviceOrderModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="serviceOrderModalContent">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Printable Invoice Folio Modal -->
+  <div class="modal-overlay" id="invoiceModal">
+    <div class="modal-card lg">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Guest Folio & Receipt</h3>
+        <button class="modal-close" onclick="closeModal('invoiceModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="printableInvoiceArea">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal('invoiceModal')">Close</button>
+        <button class="btn btn-primary" onclick="printInvoice()">🖨️ Print / Download PDF Receipt</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Employee Add/Edit Modal -->
+  <div class="modal-overlay" id="employeeModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif" id="empModalTitle">Hotel Staff Record</h3>
+        <button class="modal-close" onclick="closeModal('employeeModal')">&times;</button>
+      </div>
+      <form id="employeeForm" onsubmit="saveEmployee(event)">
+        <div class="modal-body">
+          <input type="hidden" id="empFormId">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="empName" class="form-control" required placeholder="Elena Rostova">
+            </div>
+            <div class="form-group">
+              <label>Role / Title</label>
+              <input type="text" id="empRole" class="form-control" required placeholder="Front Desk Supervisor">
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Department</label>
+              <select id="empDept" class="form-control" required>
+                <option value="Front Desk">Front Desk</option>
+                <option value="Food & Beverage">Food & Beverage</option>
+                <option value="Housekeeping">Housekeeping</option>
+                <option value="Concierge & VIP">Concierge & VIP</option>
+                <option value="Wellness & Spa">Wellness & Spa</option>
+                <option value="Security & Safety">Security & Safety</option>
+                <option value="Management & Finance">Management & Finance</option>
+                <option value="Engineering & Maintenance">Engineering & Maintenance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Shift Schedule</label>
+              <select id="empShift" class="form-control" required>
+                <option value="Morning (07:00 - 15:30)">Morning (07:00 - 15:30)</option>
+                <option value="Evening (15:00 - 23:30)">Evening (15:00 - 23:30)</option>
+                <option value="Night (23:00 - 07:30)">Night (23:00 - 07:30)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Monthly Salary ($ USD)</label>
+              <input type="number" id="empSalary" class="form-control" required placeholder="4800">
+            </div>
+            <div class="form-group">
+              <label>Contact Phone</label>
+              <input type="tel" id="empContact" class="form-control" placeholder="+1 (555) 019-2233">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Work Email</label>
+            <input type="email" id="empEmail" class="form-control" placeholder="staff@auragrand.com">
+          </div>
+          <div class="form-group">
+            <label>Staff Responsibilities & Notes</label>
+            <textarea id="empNotes" class="form-control" rows="2" placeholder="Key responsibilities..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('employeeModal')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Staff Record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. Customer Details Modal -->
+  <div class="modal-overlay" id="customerDetailsModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Guest Profile & History</h3>
+        <button class="modal-close" onclick="closeModal('customerDetailsModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="customerDetailsContent">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Edit Room Rate Modal -->
+  <div class="modal-overlay" id="editRoomRateModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Adjust Room Rate</h3>
+        <button class="modal-close" onclick="closeModal('editRoomRateModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="editRoomRateContent">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Auth & Quick Switch Modal -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Portal Access & Authentication</h3>
+        <button class="modal-close" onclick="closeModal('authModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid var(--border-gold); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <h4 style="font-size: 0.95rem; color: var(--gold-light); margin-bottom: 0.5rem;">Instant 1-Click Persona Login</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">Quickly test all user and admin features without typing passwords:</p>
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-primary btn-sm" style="flex: 1;" onclick="switchPersona('admin'); closeModal('authModal')">
+              👑 Demo Admin (Tamim Shadman)
+            </button>
+            <button class="btn btn-outline btn-sm" style="flex: 1;" onclick="switchPersona('customer'); closeModal('authModal')">
+              🛎️ Demo Guest (Eleanor Vance)
+            </button>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.85rem;">Or Sign In with Credentials</h4>
+          <form onsubmit="handleManualLogin(event)">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="authEmail" class="form-control" placeholder="admin@auragrand.com" required>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" id="authPassword" class="form-control" placeholder="••••••••" required>
+            </div>
+            <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+              <button type="submit" class="btn btn-primary" style="flex: 1;">Sign In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Suite Comparison Bar -->
+  <div class="comparison-floating-bar" id="comparisonFloatingBar">
+    <div style="display: flex; align-items: center; gap: 0.85rem;">
+      <span class="badge badge-gold" id="comparisonCountBadge">0 Suites Selected</span>
+      <div class="comparison-thumbs-group" id="comparisonThumbs"></div>
+    </div>
+    <div style="display: flex; gap: 0.5rem;">
+      <button class="btn btn-primary btn-sm" onclick="openComparisonModal()">Compare Side-by-Side</button>
+      <button class="btn btn-subtle btn-sm" onclick="clearComparison()">Clear</button>
+    </div>
+  </div>
+
+  <!-- Suite Comparison Modal -->
+  <div class="modal-overlay" id="comparisonModal">
+    <div class="modal-card lg">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Suite Comparison Matrix</h3>
+        <button class="modal-close" onclick="closeModal('comparisonModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="comparisonModalContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating AI Butler Launcher Widget -->
+  <div class="floating-ai-launcher" id="floatingAiLauncher" onclick="toggleAiConcierge()" title="Talk to 24/7 Virtual Luxury Butler">
+    <div class="ai-icon-wrap">🛎️</div>
+    <div class="ai-launcher-text">
+      <div class="ai-launcher-title">
+        <span>Aura AI Butler</span>
+        <span style="font-size: 0.65rem; color: #34d399;">● Online</span>
+      </div>
+      <div class="ai-launcher-sub">24/7 Virtual Luxury Concierge</div>
+    </div>
+  </div>
+
+  <!-- Aura AI Luxury Concierge Modal -->
+  <div class="modal-overlay" id="aiConciergeModal">
+    <div class="modal-card" style="max-width: 580px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div class="ai-icon-wrap" style="width: 42px; height: 42px; font-size: 1.3rem;">⚜</div>
+          <div>
+            <h3 class="modal-title font-serif" style="margin: 0; font-size: 1.25rem;">Aura AI Luxury Butler</h3>
+            <div style="font-size: 0.75rem; color: var(--gold-light);">24/7 In-Suite Resident Concierge • Powered by AI Intelligence</div>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeModal('aiConciergeModal')">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 1.25rem;">
+        <div class="ai-chat-body">
+          <div class="ai-chat-messages" id="aiChatMessages">
+            <div class="ai-msg bot">
+              <div class="ai-msg-avatar">🛎️</div>
+              <div class="ai-msg-bubble">
+                Good evening. I am your <strong>Aura AI Virtual Butler</strong>. Whether you desire Michelin in-suite dining, private helicopter charters, restorative hammam sessions, or express checkout, I am at your service. How may I elevate your stay?
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Chips -->
+          <div class="ai-quick-prompts">
+            <span class="ai-prompt-chip" onclick="sendQuickPrompt('Can I order champagne and caviar to my penthouse?')">🥂 Order In-Suite Dining</span>
+            <span class="ai-prompt-chip" onclick="sendQuickPrompt('Reserve helicopter airport transfer')">🚁 Book Helicopter</span>
+            <span class="ai-prompt-chip" onclick="sendQuickPrompt('Book 24K Gold Hammam spa session')">💆 Auric Spa Ritual</span>
+            <span class="ai-prompt-chip" onclick="sendQuickPrompt('Show me available Presidential penthouses')">🏨 Available Penthouses</span>
+            <span class="ai-prompt-chip" onclick="sendQuickPrompt('What is the Wi-Fi password and pool hours?')">📶 Resort Amenities</span>
+          </div>
+
+          <form onsubmit="handleAiChatSubmit(event)" class="ai-input-wrap">
+            <input type="text" id="aiChatInput" class="form-control" placeholder="Ask your luxury butler anything (e.g. 'Order dinner', 'Book transfer')..." autocomplete="off" style="flex: 1;">
+            <button type="submit" class="btn btn-primary" style="padding: 0 1.5rem;">
+              Send ✦
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- White-Label Brand Studio Modal -->
+  <div class="modal-overlay" id="whitelabelModal">
+    <div class="modal-card" style="max-width: 620px;">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title font-serif">🎨 White-Label Brand Studio</h3>
+          <div style="font-size: 0.78rem; color: var(--gold-light);">Customize and rebrand the entire hotel system in real-time</div>
+        </div>
+        <button class="modal-close" onclick="closeModal('whitelabelModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleWhitelabelSubmit(event)">
+          <div class="form-group">
+            <label>Hotel / Resort Property Name</label>
+            <input type="text" id="wlHotelName" class="form-control" value="AURA GRAND" placeholder="E.g. AURA GRAND, THE RITZ RESIDENCES" required>
+          </div>
+          <div class="form-group">
+            <label>Tagline / Hospitality Subtitle</label>
+            <input type="text" id="wlTagline" class="form-control" value="Hotel & Residences" placeholder="E.g. Ultra-Luxury Hotel & Residences">
+          </div>
+          <div class="form-group">
+            <label>Bespoke Luxury Color Palette</label>
+            <div class="theme-swatch-grid">
+              <div class="theme-swatch active" onclick="selectThemeSwatch('gold', this)">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #d4af37, #aa820a);"></div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem;">Haute Obsidian & Gold</div>
+                  <div style="font-size: 0.72rem; color: var(--text-dim);">Default Ultra-Luxury Signature</div>
+                </div>
+              </div>
+              <div class="theme-swatch" onclick="selectThemeSwatch('emerald', this)">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #10b981, #065f46);"></div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem;">Velvet Palm & Emerald</div>
+                  <div style="font-size: 0.72rem; color: var(--text-dim);">Tropical Coastal Sanctuary</div>
+                </div>
+              </div>
+              <div class="theme-swatch" onclick="selectThemeSwatch('sapphire', this)">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #38bdf8, #1e3a8a);"></div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem;">Royal Sapphire & Platinum</div>
+                  <div style="font-size: 0.72rem; color: var(--text-dim);">Alpine & Yacht Club Elegance</div>
+                </div>
+              </div>
+              <div class="theme-swatch" onclick="selectThemeSwatch('rosegold', this)">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #fb7185, #881337);"></div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem;">Rose Quartz & Diamond</div>
+                  <div style="font-size: 0.72rem; color: var(--text-dim);">Haute Parisian Boutique</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Default Currency</label>
+              <select id="wlCurrency" class="form-control">
+                <option value="USD">USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="JPY">JPY (¥)</option>
+                <option value="BDT">BDT (৳)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Property Address / City</label>
+              <input type="text" id="wlAddress" class="form-control" value="100 Ocean Crest Boulevard" placeholder="100 Ocean Crest Boulevard">
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-primary" style="flex: 2;">
+              ✦ Apply Live Rebranding
+            </button>
+            <button type="button" class="btn btn-outline" style="flex: 1;" onclick="resetWhitelabelDefaults()">
+              Reset Defaults
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Night Audit Certificate Modal -->
+  <div class="modal-overlay" id="nightAuditCertificateModal">
+    <div class="modal-card lg">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Official Night Audit Reconciliation Certificate</h3>
+        <button class="modal-close" onclick="closeModal('nightAuditCertificateModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="printableNightAuditArea">
+        <!-- Rendered dynamically -->
+      </div>
+      <div style="display: flex; gap: 0.75rem; justify-content: flex-end; padding: 1.5rem; border-top: 1px solid var(--border-subtle);">
+        <button class="btn btn-outline" onclick="closeModal('nightAuditCertificateModal')">Close</button>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ Print Official Certificate</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fleet Mobility Charter Manifest Modal -->
+  <div class="modal-overlay" id="fleetManifestModal">
+    <div class="modal-card lg" style="max-width: 780px;">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-gold">Private Mobility Concierge</span>
+          <h3 class="modal-title font-serif" style="margin-top: 0.35rem;" id="fleetModalTitle">Superyacht & Aviation Charter Manifest</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('fleetManifestModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="fleetModalHero">
+          <!-- Rendered dynamically -->
+        </div>
+        <form onsubmit="handleFleetBookingSubmit(event)" style="margin-top: 1.5rem;">
+          <input type="hidden" id="fleetCharterId">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Charter Departure Location</label>
+              <select id="fleetDepartureLoc" class="form-control">
+                <option value="Aura Private Marina — Berth #4">Aura Private Marina — Berth #4</option>
+                <option value="52nd Floor Rooftop Helipad">52nd Floor Rooftop Helipad</option>
+                <option value="Aura Private Beachfront Dock">Aura Private Beachfront Dock</option>
+                <option value="VIP Private Airport Jet Terminal">VIP Private Airport Jet Terminal</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Departure Time</label>
+              <input type="time" id="fleetDepartureTime" class="form-control" value="14:30">
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Passenger Count (VIP Guests)</label>
+              <input type="number" id="fleetGuestCount" class="form-control" min="1" max="14" value="2">
+            </div>
+            <div class="form-group">
+              <label>Onboard Catering & Champagne Reserve</label>
+              <select id="fleetCatering" class="form-control">
+                <option value="Vintage Dom Pérignon & Oscietra Caviar Service">Vintage Dom Pérignon & Oscietra Caviar Service</option>
+                <option value="Artisan Japanese Omakase & Junmai Daiginjo Sake">Artisan Japanese Omakase & Junmai Daiginjo Sake</option>
+                <option value="Organic Cold-Pressed Wellness & Detox Elixirs">Organic Cold-Pressed Wellness & Detox Elixirs</option>
+                <option value="Veuve Clicquot Sunset Berry & Truffle Platter">Veuve Clicquot Sunset Berry & Truffle Platter</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Captain / Pilot Bespoke Instructions</label>
+            <input type="text" id="fleetSpecialNotes" class="form-control" placeholder="E.g. Secluded cove anchor for swimming, sunset photography flyby, anniversary toast">
+          </div>
+          <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem;">
+            <button type="button" class="btn btn-outline" onclick="closeModal('fleetManifestModal')">Cancel</button>
+            <button type="submit" class="btn btn-primary">
+              ✦ Dispatch Charter Manifest & Captain
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certified ESG Sustainability & Green Stay Modal -->
+  <div class="modal-overlay" id="esgCertificateModal">
+    <div class="modal-card lg" style="max-width: 780px;">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-emerald">Certified Eco-Luxury</span>
+          <h3 class="modal-title font-serif" style="margin-top: 0.35rem;">Official Certified ESG Green Stay Ledger</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('esgCertificateModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="printableEsgArea">
+        <!-- Rendered dynamically -->
+      </div>
+      <div style="display: flex; gap: 0.75rem; justify-content: flex-end; padding: 1.25rem 1.5rem; border-top: 1px solid var(--border-subtle);">
+        <button class="btn btn-outline" onclick="closeModal('esgCertificateModal')">Close</button>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ Print ESG Certificate</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive 3D 360° Spatial Panoramic Explorer Modal -->
+  <div class="modal-overlay" id="spatialTourModal">
+    <div class="modal-card lg" style="max-width: 1100px; width: 95vw; height: 85vh; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+      <div class="modal-header" style="padding: 1rem 1.5rem; background: rgba(10, 14, 23, 0.96); border-bottom: 1px solid var(--border-gold); z-index: 10;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="badge badge-gold">✦ 3D Spatial Sanctuary Explorer</span>
+          <h3 class="modal-title font-serif" id="spatialTourTitle" style="font-size: 1.2rem; margin: 0;">Imperial Presidential Penthouse (Suite 501)</h3>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="display: flex; gap: 0.25rem; background: rgba(255, 255, 255, 0.05); padding: 0.2rem 0.4rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <button class="spatial-mode-btn active" id="btnLightDay" onclick="Aura3D.setSpatialLighting('day')">☀️ Daylight</button>
+            <button class="spatial-mode-btn" id="btnLightSunset" onclick="Aura3D.setSpatialLighting('sunset')">🌅 Sunset Amber</button>
+            <button class="spatial-mode-btn" id="btnLightNight" onclick="Aura3D.setSpatialLighting('night')">🌙 Obsidian Night</button>
+          </div>
+          <button class="btn btn-outline btn-xs" id="btnSpatialDrift" onclick="Aura3D.toggleSpatialAutoRotate()">🔄 Auto-Pan</button>
+          <button class="modal-close" onclick="closeModal('spatialTourModal')" style="position: static; font-size: 1.5rem; line-height: 1;">&times;</button>
+        </div>
+      </div>
+      <div id="spatial3dViewport" style="flex: 1; position: relative; width: 100%; height: 100%; cursor: grab; background: #000;">
+        <!-- Three.js Canvas Injected Here -->
+      </div>
+      <div style="padding: 0.75rem 1.5rem; background: rgba(10, 14, 23, 0.95); border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; z-index: 10; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="color: var(--text-muted); display: flex; gap: 1.25rem; font-size: 0.78rem;">
+          <span>📐 <strong>Field of View:</strong> 75° Panoramic Ultra-Wide</span>
+          <span>✨ <strong>Rendering Engine:</strong> Three.js WebGL Hardware Accelerated</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn btn-outline btn-sm" onclick="closeModal('spatialTourModal')">Close 3D View</button>
+          <button class="btn btn-primary btn-sm" id="btnSpatialBookSuite" onclick="closeModal('spatialTourModal'); startBookingRoom('rm_501');">
+            Reserve Suite 501 →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Commercial Acquisition & Valuation Prospectus Modal -->
+  <div class="modal-overlay" id="commercialProspectusModal">
+    <div class="modal-card lg" style="max-width: 920px;">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-gold">Turnkey SaaS Commercial Acquisition</span>
+          <h3 class="modal-title font-serif" style="margin-top: 0.35rem;">Aura Grand PMS • Software Valuation & Asset Prospectus</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('commercialProspectusModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="printableProspectusArea" style="max-height: 70vh; overflow-y: auto;">
+        <!-- Populated dynamically via JS -->
+      </div>
+      <div style="display: flex; gap: 0.75rem; justify-content: flex-end; padding: 1.25rem 1.5rem; border-top: 1px solid var(--border-subtle); flex-wrap: wrap;">
+        <button class="btn btn-outline" onclick="closeModal('commercialProspectusModal')">Close</button>
+        <button class="btn btn-outline" onclick="downloadProspectusJson()">📥 Export Technical Blueprint (JSON)</button>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ Print Commercial Prospectus (PDF)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- 3D WebGL Engine & OrbitControls -->
+  <script src="/js/vendor/three.min.js"></script>
+  <script src="/js/vendor/OrbitControls.js"></script>
+  <!-- Client JavaScript -->
+  <script src="/js/three-components.js?v=2.8"></script>
+  <script src="/js/app.js?v=2.8"></script>
+</body>
+</html>

@@ -1,0 +1,1198 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_1",
+      "name": "Tamim Shadman",
+      "email": "admin@auragrand.com",
+      "password": "$2b$10$qM.oqaw4KtZbzSHLG.yX3uhWginJg9OPK61MsMOZyCKzzxtYxmQ1S",
+      "role": "admin",
+      "title": "General Manager & Hotel Director",
+      "phone": "+1 (555) 019-2831",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-01-15T09:00:00Z"
+    },
+    {
+      "id": "usr_guest_1",
+      "name": "Eleanor Vance",
+      "email": "guest@auragrand.com",
+      "password": "$2b$10$ZHtBeeqXCPmiTlobo5gnl.D.SyU8eLahUkroqBX2KofQ53KE5WHUe",
+      "role": "customer",
+      "vipTier": "Gold",
+      "loyaltyPoints": 4850,
+      "phone": "+1 (555) 234-5678",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150",
+      "createdAt": "2026-02-10T11:20:00Z"
+    },
+    {
+      "id": "usr_guest_2",
+      "name": "Readuanul Fahim",
+      "email": "fahim@auragrand.com",
+      "password": "$2b$10$ZHtBeeqXCPmiTlobo5gnl.D.SyU8eLahUkroqBX2KofQ53KE5WHUe",
+      "role": "customer",
+      "vipTier": "Platinum",
+      "loyaltyPoints": 9200,
+      "phone": "+1 (555) 789-0123",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "createdAt": "2026-02-14T14:45:00Z"
+    },
+    {
+      "id": "usr_guest_3",
+      "name": "Julian Hayes",
+      "email": "julian@auragrand.com",
+      "password": "$2b$10$ZHtBeeqXCPmiTlobo5gnl.D.SyU8eLahUkroqBX2KofQ53KE5WHUe",
+      "role": "customer",
+      "vipTier": "Silver",
+      "loyaltyPoints": 2150,
+      "phone": "+1 (555) 456-7890",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "createdAt": "2026-03-01T16:10:00Z"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "rm_501",
+      "roomNumber": "501",
+      "floor": 5,
+      "name": "The Imperial Presidential Penthouse",
+      "type": "Presidential Suite",
+      "pricePerNight": 1250,
+      "capacity": 4,
+      "bedType": "Grand Emperor King Bed",
+      "sizeSqFt": 1850,
+      "view": "Skyline & Ocean Panoramic",
+      "status": "Cleaning",
+      "rating": 4.98,
+      "reviewCount": 42,
+      "image": "/assets/images/presidential_suite.jpg",
+      "featured": true,
+      "description": "The pinnacle of luxury living. Features a wrap-around private terrace with heated jacuzzi, private butler service, bespoke Italian furnishings, and breathtaking 360-degree views.",
+      "amenities": [
+        "Private Butler Service 24/7",
+        "Rooftop Jacuzzi & Sun Deck",
+        "Bang & Olufsen Sound System",
+        "Sub-Zero Wine Cellar & Bar",
+        "Marble Rain Shower & Spa Tub",
+        "Complimentary Airport Chauffeur",
+        "High-Speed Wi-Fi 6",
+        "Luxury Hermès Toiletries"
+      ]
+    },
+    {
+      "id": "rm_401",
+      "roomNumber": "401",
+      "floor": 4,
+      "name": "Azure Deluxe Oceanfront Suite",
+      "type": "Deluxe Ocean View",
+      "pricePerNight": 680,
+      "capacity": 3,
+      "bedType": "Signature California King",
+      "sizeSqFt": 920,
+      "view": "Direct Oceanfront",
+      "status": "Occupied",
+      "rating": 4.95,
+      "reviewCount": 88,
+      "image": "/assets/images/ocean_deluxe.jpg",
+      "featured": true,
+      "description": "Awaken to gentle ocean waves and crystalline views. Direct oceanfront balcony, plush seating area, deep soaking tub, and curated coastal modern aesthetics.",
+      "amenities": [
+        "Oceanfront Private Balcony",
+        "Signature King Bed & Egyptian Linens",
+        "65\" 4K OLED Smart TV",
+        "Nespresso Artisan Coffee Machine",
+        "Deep Soaking Marble Bathtub",
+        "Luxury Diptyque Amenities",
+        "Complimentary Breakfast for 2",
+        "High-Speed Wi-Fi"
+      ]
+    },
+    {
+      "id": "rm_301",
+      "roomNumber": "301",
+      "floor": 3,
+      "name": "The Sovereign Executive Suite",
+      "type": "Executive Suite",
+      "pricePerNight": 490,
+      "capacity": 2,
+      "bedType": "Executive King Bed",
+      "sizeSqFt": 750,
+      "view": "Skyline & Harbor View",
+      "status": "Reserved",
+      "rating": 4.92,
+      "reviewCount": 64,
+      "image": "/assets/images/executive_suite.jpg",
+      "featured": true,
+      "description": "Engineered for luxury business leaders and discerning travelers. Includes ergonomic walnut executive workstation, private lounge area, and Executive Club Lounge access.",
+      "amenities": [
+        "Executive Club Lounge Access",
+        "Ergonomic Workstation & Herman Miller Chair",
+        "High-Speed Secure Fiber Wi-Fi",
+        "Premium Sound Bar & Smart Display",
+        "Walk-in Wardrobe with Safe",
+        "Gourmet Minibar & Cocktail Kit",
+        "Shoeshine & Pressing Service",
+        "Rainfall Shower"
+      ]
+    },
+    {
+      "id": "rm_201",
+      "roomNumber": "201",
+      "floor": 2,
+      "name": "Royal Heritage Double Queen",
+      "type": "Deluxe Suite",
+      "pricePerNight": 420,
+      "capacity": 4,
+      "bedType": "2 Queen Luxury Beds",
+      "sizeSqFt": 680,
+      "view": "Tropical Gardens & Lagoon",
+      "status": "Available",
+      "rating": 4.88,
+      "reviewCount": 51,
+      "image": "/assets/images/hero_resort.jpg",
+      "featured": false,
+      "description": "Ideal for families and groups who refuse to compromise on elegance. Two plush queen beds, dual vanity bathroom, and serene views of the hotel flora.",
+      "amenities": [
+        "Two Plush Queen Beds",
+        "Garden View Private Terrace",
+        "Dual Vanity Stone Bathroom",
+        "Smart Entertainment Hub",
+        "Mini Refrigerator & Coffee Bar",
+        "Luxury Bathrobes & Slippers",
+        "Daily Housekeeping & Turndown"
+      ]
+    },
+    {
+      "id": "rm_202",
+      "roomNumber": "202",
+      "floor": 2,
+      "name": "Lagoon Garden Deluxe",
+      "type": "Deluxe Suite",
+      "pricePerNight": 390,
+      "capacity": 2,
+      "bedType": "King Bed",
+      "sizeSqFt": 620,
+      "view": "Tropical Lagoon View",
+      "status": "Cleaning",
+      "rating": 4.86,
+      "reviewCount": 39,
+      "image": "/assets/images/rooftop_pool.jpg",
+      "featured": false,
+      "description": "Quiet sanctuary on the second floor overlooking our tranquil lagoon. Features contemporary Scandinavian aesthetics with warm teak woodwork.",
+      "amenities": [
+        "Lagoon Terrace Seating",
+        "Signature King Bed",
+        "Spacious Walk-In Shower",
+        "Smart Room Climate Control",
+        "In-room Safe & Mini Bar",
+        "High-Speed Wi-Fi"
+      ]
+    },
+    {
+      "id": "rm_101",
+      "roomNumber": "101",
+      "floor": 1,
+      "name": "Garden Terrace Classic Room",
+      "type": "Classic Room",
+      "pricePerNight": 310,
+      "capacity": 2,
+      "bedType": "Queen Bed",
+      "sizeSqFt": 480,
+      "view": "Botanical Courtyard",
+      "status": "Available",
+      "rating": 4.82,
+      "reviewCount": 76,
+      "image": "/assets/images/ocean_deluxe.jpg",
+      "featured": false,
+      "description": "Charming ground-floor retreat with immediate walkout access to the botanical gardens. Quiet, peaceful, and beautifully appointed.",
+      "amenities": [
+        "Direct Garden Patio Access",
+        "Queen Plush Bed",
+        "Walk-in Rain Shower",
+        "Complimentary High-Speed Wi-Fi",
+        "HD Smart TV & Stream Cast",
+        "Coffee & Tea Station"
+      ]
+    },
+    {
+      "id": "rm_102",
+      "roomNumber": "102",
+      "floor": 1,
+      "name": "Courtyard Poolside Room",
+      "type": "Classic Room",
+      "pricePerNight": 340,
+      "capacity": 2,
+      "bedType": "Queen Bed",
+      "sizeSqFt": 510,
+      "view": "Resort Pool View",
+      "status": "Maintenance",
+      "rating": 4.8,
+      "reviewCount": 30,
+      "image": "/assets/images/hero_resort.jpg",
+      "featured": false,
+      "description": "Direct access to the resort pool and sun deck. Perfect for guests who love morning laps and poolside afternoon lounging.",
+      "amenities": [
+        "Poolside Walkout Terrace",
+        "Queen Bed with Pillowtop Mattress",
+        "Pool Towel & Tote Bag Included",
+        "Mini Refrigerator & Refreshments",
+        "High-Speed Wi-Fi"
+      ]
+    },
+    {
+      "id": "rm_302",
+      "roomNumber": "302",
+      "floor": 3,
+      "name": "Grand Family Sanctuary Suite",
+      "type": "Family Suite",
+      "pricePerNight": 580,
+      "capacity": 5,
+      "bedType": "1 King Bed + 2 Twin Beds",
+      "sizeSqFt": 980,
+      "view": "Resort Ocean & Grounds",
+      "status": "Available",
+      "rating": 4.91,
+      "reviewCount": 45,
+      "image": "/assets/images/presidential_suite.jpg",
+      "featured": false,
+      "description": "Two interconnected bedrooms with an expansive central lounge. Designed with plenty of space for family dining, games, and relaxation.",
+      "amenities": [
+        "Two Interconnected Bedrooms",
+        "Two Full Luxury Bathrooms",
+        "Family Dining Table & Wet Bar",
+        "Gaming Console & Kids Entertainment",
+        "Complimentary Breakfast for Family",
+        "High-Speed Wi-Fi 6"
+      ]
+    }
+  ],
+  "employees": [
+    {
+      "id": "emp_1",
+      "staffId": "EMP-1001",
+      "name": "Alexander Sterling",
+      "role": "Front Office Director",
+      "department": "Front Desk",
+      "shift": "Morning (07:00 - 15:30)",
+      "salary": 5800,
+      "contact": "+1 (555) 111-2233",
+      "email": "alexander.s@auragrand.com",
+      "joinDate": "2023-04-12",
+      "status": "Active",
+      "notes": "Oversees VIP arrivals, guest check-ins, and front office hospitality team."
+    },
+    {
+      "id": "emp_2",
+      "staffId": "EMP-1002",
+      "name": "Chef Marcus Beaulieu",
+      "role": "Executive Head Chef",
+      "department": "Food & Beverage",
+      "shift": "Evening (15:00 - 23:30)",
+      "salary": 7200,
+      "contact": "+1 (555) 222-3344",
+      "email": "marcus.b@auragrand.com",
+      "joinDate": "2022-08-01",
+      "status": "Active",
+      "notes": "Michelin star background, manages fine dining culinary kitchen and banquet menus."
+    },
+    {
+      "id": "emp_3",
+      "staffId": "EMP-1003",
+      "name": "Seraphina Lin",
+      "role": "Head of Housekeeping & Cleanliness",
+      "department": "Housekeeping",
+      "shift": "Morning (07:00 - 15:30)",
+      "salary": 4300,
+      "contact": "+1 (555) 333-4455",
+      "email": "seraphina.l@auragrand.com",
+      "joinDate": "2024-01-10",
+      "status": "Active",
+      "notes": "Maintains 5-star cleanliness audit standards, room turnover workflows, and linen inventory."
+    },
+    {
+      "id": "emp_4",
+      "staffId": "EMP-1004",
+      "name": "Darius Vance",
+      "role": "Chief Concierge (Les Clefs d'Or)",
+      "department": "Concierge & VIP",
+      "shift": "Morning (07:00 - 15:30)",
+      "salary": 5200,
+      "contact": "+1 (555) 444-5566",
+      "email": "darius.v@auragrand.com",
+      "joinDate": "2023-11-20",
+      "status": "Active",
+      "notes": "Arranges yacht charters, private jet transfers, helicopter tours, and private reservations."
+    },
+    {
+      "id": "emp_5",
+      "staffId": "EMP-1005",
+      "name": "Elena Rostova",
+      "role": "Spa & Wellness Director",
+      "department": "Wellness & Spa",
+      "shift": "Morning (08:30 - 17:00)",
+      "salary": 4900,
+      "contact": "+1 (555) 555-6677",
+      "email": "elena.r@auragrand.com",
+      "joinDate": "2024-03-05",
+      "status": "Active",
+      "notes": "Oversees 8 treatment suites, sauna sanctuary, and certified massage therapists."
+    },
+    {
+      "id": "emp_6",
+      "staffId": "EMP-1006",
+      "name": "Viktor Cruz",
+      "role": "Chief Security Officer",
+      "department": "Security & Safety",
+      "shift": "Night (23:00 - 07:30)",
+      "salary": 4600,
+      "contact": "+1 (555) 666-7788",
+      "email": "viktor.c@auragrand.com",
+      "joinDate": "2023-06-18",
+      "status": "Active",
+      "notes": "Manages perimeter security, 24/7 CCTV surveillance, and VIP executive protection."
+    },
+    {
+      "id": "emp_7",
+      "staffId": "EMP-1007",
+      "name": "Camila Rodriguez",
+      "role": "Lead Financial Controller",
+      "department": "Management & Finance",
+      "shift": "Morning (08:00 - 16:30)",
+      "salary": 6500,
+      "contact": "+1 (555) 777-8899",
+      "email": "camila.r@auragrand.com",
+      "joinDate": "2022-10-15",
+      "status": "Active",
+      "notes": "Audits daily billing transactions, vendor accounts, revenue management, and tax reporting."
+    },
+    {
+      "id": "emp_8",
+      "staffId": "EMP-1008",
+      "name": "Oliver Thorne",
+      "role": "Lead Maintenance Engineer",
+      "department": "Engineering & Maintenance",
+      "shift": "Evening (15:00 - 23:30)",
+      "salary": 4400,
+      "contact": "+1 (555) 888-9900",
+      "email": "oliver.t@auragrand.com",
+      "joinDate": "2024-02-12",
+      "status": "On Leave",
+      "notes": "HVAC systems, pool filtration, elevator safety inspections."
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust_1",
+      "name": "Eleanor Vance",
+      "email": "guest@auragrand.com",
+      "phone": "+1 (555) 234-5678",
+      "vipTier": "Gold",
+      "loyaltyPoints": 5391,
+      "totalStays": 8,
+      "totalSpent": 13825.4,
+      "currentStatus": "Checked In",
+      "activeRoom": "301",
+      "country": "United States",
+      "notes": "Prefers feather-free synthetic pillows and high floor suites. Sparkling mineral water upon arrival."
+    },
+    {
+      "id": "cust_2",
+      "name": "Readuanul Fahim",
+      "email": "fahim@auragrand.com",
+      "phone": "+1 (555) 789-0123",
+      "vipTier": "Platinum",
+      "loyaltyPoints": 9200,
+      "totalStays": 12,
+      "totalSpent": 18750,
+      "currentStatus": "Reserved",
+      "activeRoom": "501",
+      "country": "United Kingdom",
+      "notes": "VIP guest. Loves rooftop infinity cabana bookings. Chauffeur pickup required."
+    },
+    {
+      "id": "cust_3",
+      "name": "Julian Hayes",
+      "email": "julian@auragrand.com",
+      "phone": "+1 (555) 456-7890",
+      "vipTier": "Silver",
+      "loyaltyPoints": 2150,
+      "totalStays": 3,
+      "totalSpent": 3100,
+      "currentStatus": "Checked Out",
+      "activeRoom": null,
+      "country": "Canada",
+      "notes": "Vegetarian gourmet dining preference, regular spa patron."
+    },
+    {
+      "id": "cust_4",
+      "name": "Lord Harrison Blake",
+      "email": "harrison.b@blakeholdings.com",
+      "phone": "+44 20 7946 0912",
+      "vipTier": "Platinum",
+      "loyaltyPoints": 14500,
+      "totalStays": 15,
+      "totalSpent": 34200,
+      "currentStatus": "Checked In",
+      "activeRoom": "301",
+      "country": "United Kingdom",
+      "notes": "Private yacht charter frequent guest. Late check-out guaranteed."
+    },
+    {
+      "id": "cust_5",
+      "name": "Sophie Moreau",
+      "email": "sophie.moreau@paris-art.fr",
+      "phone": "+33 1 42 68 55 00",
+      "vipTier": "Gold",
+      "loyaltyPoints": 5600,
+      "totalStays": 4,
+      "totalSpent": 6300,
+      "currentStatus": "Reserved",
+      "activeRoom": "201",
+      "country": "France",
+      "notes": "Art curator, enjoys vintage French wine pairings."
+    },
+    {
+      "id": "cust_e9d18110",
+      "name": "Tester 2",
+      "email": "test2@aura.com",
+      "phone": "",
+      "vipTier": "Gold",
+      "loyaltyPoints": 162,
+      "totalStays": 1,
+      "totalSpent": 1617,
+      "currentStatus": "Reserved",
+      "activeRoom": "301",
+      "country": "International",
+      "notes": "Recent online reservation"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv_spa_1",
+      "code": "SPA-ROYAL",
+      "name": "Royal Auric Spa & Aromatherapy Ritual",
+      "category": "Wellness & Spa",
+      "description": "90-minute bespoke deep muscle tension release with organic botanical essential oils, warm herbal compresses, and private steam sanctuary access.",
+      "price": 240,
+      "unit": "per guest",
+      "image": "/assets/images/luxury_spa.jpg",
+      "icon": "spa",
+      "popular": true,
+      "duration": "90 mins"
+    },
+    {
+      "id": "srv_spa_2",
+      "code": "SPA-ZEN",
+      "name": "Himalayan Hot Stone & Sound Bath",
+      "category": "Wellness & Spa",
+      "description": "75-minute therapeutic heated mineral volcanic stones combined with Tibetan singing bowl acoustic meditation.",
+      "price": 195,
+      "unit": "per guest",
+      "image": "/assets/images/luxury_spa.jpg",
+      "icon": "self_improvement",
+      "popular": false,
+      "duration": "75 mins"
+    },
+    {
+      "id": "srv_dine_1",
+      "code": "DINE-CHEF",
+      "name": "Michelin Star Chef's 7-Course Tasting Menu",
+      "category": "Fine Dining & Bar",
+      "description": "Gastronomic journey curated nightly by Chef Marcus Beaulieu with optional sommelier reserve wine flight pairings.",
+      "price": 280,
+      "unit": "per guest",
+      "image": "/assets/images/fine_dining.jpg",
+      "icon": "restaurant",
+      "popular": true,
+      "duration": "2.5 hours"
+    },
+    {
+      "id": "srv_dine_2",
+      "code": "DINE-CANDLE",
+      "name": "Private In-Suite Candlelit Gourmet Dinner",
+      "category": "Fine Dining & Bar",
+      "description": "Romantic 4-course dinner served with silver cloches on your private balcony or living area, personal waiter included.",
+      "price": 320,
+      "unit": "per couple",
+      "image": "/assets/images/fine_dining.jpg",
+      "icon": "dinner_dining",
+      "popular": true,
+      "duration": "2 hours"
+    },
+    {
+      "id": "srv_dine_3",
+      "code": "DINE-BKFST",
+      "name": "Grand Champagne Sunrise Buffet",
+      "category": "Fine Dining & Bar",
+      "description": "Artisan bakery baskets, truffled poached eggs, smoked salmon, exotic fruits, and bottomless Veuve Clicquot champagne.",
+      "price": 65,
+      "unit": "per guest / day",
+      "image": "/assets/images/fine_dining.jpg",
+      "icon": "brunch_dining",
+      "popular": false,
+      "duration": "06:30 - 11:00"
+    },
+    {
+      "id": "srv_pool_1",
+      "code": "POOL-CABANA",
+      "name": "VIP Rooftop Infinity Pool Cabana Daybed",
+      "category": "Leisure & Pool",
+      "description": "Dedicated shaded poolside cabana for up to 4 guests, chilled seasonal fruit skewers, Evian mist spray, and champagne bucket.",
+      "price": 180,
+      "unit": "per day",
+      "image": "/assets/images/rooftop_pool.jpg",
+      "icon": "pool",
+      "popular": true,
+      "duration": "Full Day"
+    },
+    {
+      "id": "srv_trans_1",
+      "code": "TRANS-LIMO",
+      "name": "Mercedes Maybach Airport Chauffeur Transfer",
+      "category": "Transportation",
+      "description": "Seamless door-to-door transfer in a luxury Mercedes Maybach or S-Class with in-car Wi-Fi, chilled beverages, and luggage handling.",
+      "price": 140,
+      "unit": "one way",
+      "image": "/assets/images/hero_resort.jpg",
+      "icon": "directions_car",
+      "popular": true,
+      "duration": "On Demand"
+    },
+    {
+      "id": "srv_trans_2",
+      "code": "TRANS-HELI",
+      "name": "Scenic Coastal Helicopter Excursion",
+      "category": "Transportation",
+      "description": "30-minute breathtaking aerial flight above the coastline and island reefs from the hotel helipad.",
+      "price": 650,
+      "unit": "per flight (up to 3 guests)",
+      "image": "/assets/images/hero_resort.jpg",
+      "icon": "flight",
+      "popular": false,
+      "duration": "30 mins"
+    },
+    {
+      "id": "srv_yacht_1",
+      "code": "YACHT-SOVEREIGN",
+      "name": "Sunseeker 88ft Superyacht Private Charter",
+      "category": "Transportation",
+      "description": "Exclusive private maritime charter with captain, sommelier, and bespoke chef. Includes Dom Pérignon bar, seabob watercraft, and upper deck jacuzzi.",
+      "price": 4500,
+      "unit": "per 4-hour charter",
+      "image": "/assets/images/superyacht_charter.jpg",
+      "icon": "directions_boat",
+      "popular": true,
+      "duration": "4 Hours"
+    },
+    {
+      "id": "srv_heli_vip",
+      "code": "HELI-VIP-SHUTTLE",
+      "name": "Airbus ACH130 VIP Rooftop Heli-Transfer",
+      "category": "Transportation",
+      "description": "Point-to-point luxury helicopter transfer directly to our 52nd-floor rooftop helipad with Bose noise-canceling headsets and Hermès leather cabin.",
+      "price": 1850,
+      "unit": "per flight (up to 5 guests)",
+      "image": "/assets/images/helicopter_transfer.jpg",
+      "icon": "flight",
+      "popular": true,
+      "duration": "25 mins flight"
+    },
+    {
+      "id": "srv_house_1",
+      "code": "CARE-LAUNDRY",
+      "name": "Express White-Glove Laundry & Pressing",
+      "category": "Guest Care",
+      "description": "Same-day delicate garment dry cleaning, pressing, and hanger delivery inside luxury garment covers.",
+      "price": 55,
+      "unit": "per load",
+      "image": "/assets/images/executive_suite.jpg",
+      "icon": "local_laundry_service",
+      "popular": false,
+      "duration": "4 hours turnaround"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk_1",
+      "bookingRef": "AGH-72941",
+      "customerId": "cust_1",
+      "customerName": "Eleanor Vance",
+      "customerEmail": "guest@auragrand.com",
+      "customerPhone": "+1 (555) 234-5678",
+      "roomId": "rm_401",
+      "roomNumber": "401",
+      "roomName": "Azure Deluxe Oceanfront Suite",
+      "roomType": "Deluxe Ocean View",
+      "pricePerNight": 680,
+      "checkInDate": "2026-10-15",
+      "checkOutDate": "2026-10-20",
+      "nights": 5,
+      "guests": 2,
+      "selectedServices": [
+        {
+          "id": "srv_spa_1",
+          "name": "Royal Auric Spa & Aromatherapy Ritual",
+          "price": 240,
+          "quantity": 2,
+          "subtotal": 480
+        },
+        {
+          "id": "srv_dine_1",
+          "name": "Michelin Star Chef's 7-Course Tasting Menu",
+          "price": 280,
+          "quantity": 2,
+          "subtotal": 560
+        }
+      ],
+      "roomSubtotal": 3400,
+      "servicesSubtotal": 1040,
+      "taxAmount": 444,
+      "discountAmount": 200,
+      "grandTotal": 4684,
+      "paymentStatus": "Paid",
+      "bookingStatus": "Checked In",
+      "specialRequests": "High floor, anniversary champagne setup, synthetics pillows only.",
+      "createdAt": "2026-10-10T14:30:00Z",
+      "invoiceId": "inv_1"
+    },
+    {
+      "id": "bk_2",
+      "bookingRef": "AGH-88319",
+      "customerId": "cust_2",
+      "customerName": "Readuanul Fahim",
+      "customerEmail": "fahim@auragrand.com",
+      "customerPhone": "+1 (555) 789-0123",
+      "roomId": "rm_501",
+      "roomNumber": "501",
+      "roomName": "The Imperial Presidential Penthouse",
+      "roomType": "Presidential Suite",
+      "pricePerNight": 1250,
+      "checkInDate": "2026-10-22",
+      "checkOutDate": "2026-10-27",
+      "nights": 5,
+      "guests": 3,
+      "selectedServices": [
+        {
+          "id": "srv_trans_1",
+          "name": "Mercedes Maybach Airport Chauffeur Transfer",
+          "price": 140,
+          "quantity": 2,
+          "subtotal": 280
+        },
+        {
+          "id": "srv_pool_1",
+          "name": "VIP Rooftop Infinity Pool Cabana Daybed",
+          "price": 180,
+          "quantity": 3,
+          "subtotal": 540
+        }
+      ],
+      "roomSubtotal": 6250,
+      "servicesSubtotal": 820,
+      "taxAmount": 707,
+      "discountAmount": 500,
+      "grandTotal": 7277,
+      "paymentStatus": "Paid",
+      "bookingStatus": "Confirmed",
+      "specialRequests": "Helipad arrival, chilled vintage champagne in penthouse suite.",
+      "createdAt": "2026-10-12T09:15:00Z",
+      "invoiceId": "inv_2"
+    },
+    {
+      "id": "bk_3",
+      "bookingRef": "AGH-49210",
+      "customerId": "cust_3",
+      "customerName": "Julian Hayes",
+      "customerEmail": "julian@auragrand.com",
+      "customerPhone": "+1 (555) 456-7890",
+      "roomId": "rm_202",
+      "roomNumber": "202",
+      "roomName": "Lagoon Garden Deluxe",
+      "roomType": "Deluxe Suite",
+      "pricePerNight": 390,
+      "checkInDate": "2026-10-05",
+      "checkOutDate": "2026-10-08",
+      "nights": 3,
+      "guests": 2,
+      "selectedServices": [
+        {
+          "id": "srv_spa_2",
+          "name": "Himalayan Hot Stone & Sound Bath",
+          "price": 195,
+          "quantity": 1,
+          "subtotal": 195
+        }
+      ],
+      "roomSubtotal": 1170,
+      "servicesSubtotal": 195,
+      "taxAmount": 136.5,
+      "discountAmount": 0,
+      "grandTotal": 1501.5,
+      "paymentStatus": "Paid",
+      "bookingStatus": "Checked Out",
+      "specialRequests": "Quiet room near botanical pond, organic herbal tea selections.",
+      "createdAt": "2026-09-28T16:00:00Z",
+      "invoiceId": "inv_3"
+    },
+    {
+      "id": "bk_d1e5a65c",
+      "bookingRef": "AGH-92540",
+      "customerId": "cust_70a593",
+      "customerName": "Eleanor Vance",
+      "customerEmail": "guest@auragrand.com",
+      "customerPhone": "+1 (555) 234-5678",
+      "roomId": "rm_501",
+      "roomNumber": "501",
+      "roomName": "The Imperial Presidential Penthouse",
+      "roomType": "Presidential Suite",
+      "pricePerNight": 1250,
+      "checkInDate": "2026-10-17",
+      "checkOutDate": "2026-10-20",
+      "nights": 3,
+      "guests": 2,
+      "selectedServices": [
+        {
+          "id": "srv_spa_1",
+          "name": "Royal Auric Spa & Aromatherapy Ritual",
+          "price": 240,
+          "quantity": 1,
+          "subtotal": 240
+        }
+      ],
+      "roomSubtotal": 3750,
+      "servicesSubtotal": 240,
+      "taxAmount": 359.1,
+      "discountAmount": 399,
+      "grandTotal": 3950.1,
+      "paymentStatus": "Paid",
+      "bookingStatus": "Checked Out",
+      "specialRequests": "",
+      "createdAt": "2026-10-17T18:17:43.589Z",
+      "invoiceId": "inv_6264f43c",
+      "checkedOutAt": "2026-10-17T18:21:16.159Z"
+    },
+    {
+      "id": "bk_f7631c94",
+      "bookingRef": "AGH-57532",
+      "customerId": "cust_df3cd8",
+      "customerName": "Eleanor Vance",
+      "customerEmail": "guest@auragrand.com",
+      "customerPhone": "+1 (555) 234-5678",
+      "roomId": "rm_301",
+      "roomNumber": "301",
+      "roomName": "The Sovereign Executive Suite",
+      "roomType": "Executive Suite",
+      "pricePerNight": 490,
+      "checkInDate": "2026-10-17",
+      "checkOutDate": "2026-10-20",
+      "nights": 3,
+      "guests": 2,
+      "selectedServices": [],
+      "roomSubtotal": 1470,
+      "servicesSubtotal": 0,
+      "taxAmount": 132.3,
+      "discountAmount": 147,
+      "grandTotal": 1455.3,
+      "paymentStatus": "Paid",
+      "bookingStatus": "Checked In",
+      "specialRequests": "",
+      "createdAt": "2026-10-17T20:12:11.359Z",
+      "invoiceId": "inv_de98ade5"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv_1",
+      "invoiceNumber": "INV-2026-0842",
+      "bookingId": "bk_1",
+      "bookingRef": "AGH-72941",
+      "customerName": "Eleanor Vance",
+      "customerEmail": "guest@auragrand.com",
+      "roomNumber": "401",
+      "issueDate": "2026-10-15",
+      "dueDate": "2026-10-20",
+      "lineItems": [
+        {
+          "description": "Azure Deluxe Oceanfront Suite (5 Nights @ $680)",
+          "amount": 3400
+        },
+        {
+          "description": "Royal Auric Spa & Aromatherapy Ritual (2 Guests)",
+          "amount": 480
+        },
+        {
+          "description": "Michelin Star Chef's 7-Course Tasting Menu (2 Guests)",
+          "amount": 560
+        },
+        {
+          "description": "VIP Loyalty Discount (Gold Tier)",
+          "amount": -200
+        },
+        {
+          "description": "Luxury Resort Surcharge & Hospitality Tax (10%)",
+          "amount": 444
+        }
+      ],
+      "subtotal": 4240,
+      "tax": 444,
+      "discount": 200,
+      "totalAmount": 4684,
+      "amountPaid": 4684,
+      "balanceDue": 0,
+      "paymentMethod": "Credit Card (Visa Signature *4819)",
+      "paymentStatus": "Paid",
+      "transactionId": "TXN-994821038"
+    },
+    {
+      "id": "inv_2",
+      "invoiceNumber": "INV-2026-0843",
+      "bookingId": "bk_2",
+      "bookingRef": "AGH-88319",
+      "customerName": "Readuanul Fahim",
+      "customerEmail": "fahim@auragrand.com",
+      "roomNumber": "501",
+      "issueDate": "2026-10-12",
+      "dueDate": "2026-10-22",
+      "lineItems": [
+        {
+          "description": "Imperial Presidential Penthouse (5 Nights @ $1,250)",
+          "amount": 6250
+        },
+        {
+          "description": "Mercedes Maybach Airport Chauffeur (Roundtrip)",
+          "amount": 280
+        },
+        {
+          "description": "VIP Rooftop Pool Cabana (3 Days)",
+          "amount": 540
+        },
+        {
+          "description": "Platinum Elite Member Privilege Discount",
+          "amount": -500
+        },
+        {
+          "description": "Luxury Hospitality Tax & City Tourism Fee (10%)",
+          "amount": 707
+        }
+      ],
+      "subtotal": 6570,
+      "tax": 707,
+      "discount": 500,
+      "totalAmount": 7277,
+      "amountPaid": 7277,
+      "balanceDue": 0,
+      "paymentMethod": "Amex Centurion (*1008)",
+      "paymentStatus": "Paid",
+      "transactionId": "TXN-883019482"
+    },
+    {
+      "id": "inv_3",
+      "invoiceNumber": "INV-2026-0840",
+      "bookingId": "bk_3",
+      "bookingRef": "AGH-49210",
+      "customerName": "Julian Hayes",
+      "customerEmail": "julian@auragrand.com",
+      "roomNumber": "202",
+      "issueDate": "2026-10-05",
+      "dueDate": "2026-10-08",
+      "lineItems": [
+        {
+          "description": "Lagoon Garden Deluxe (3 Nights @ $390)",
+          "amount": 1170
+        },
+        {
+          "description": "Himalayan Hot Stone & Sound Bath",
+          "amount": 195
+        },
+        {
+          "description": "Hospitality Tax (10%)",
+          "amount": 136.5
+        }
+      ],
+      "subtotal": 1365,
+      "tax": 136.5,
+      "discount": 0,
+      "totalAmount": 1501.5,
+      "amountPaid": 1501.5,
+      "balanceDue": 0,
+      "paymentMethod": "Mastercard World Elite (*7720)",
+      "paymentStatus": "Paid",
+      "transactionId": "TXN-772910394"
+    },
+    {
+      "id": "inv_6264f43c",
+      "invoiceNumber": "INV-2026-9137",
+      "bookingId": "bk_d1e5a65c",
+      "bookingRef": "AGH-92540",
+      "customerName": "Eleanor Vance",
+      "customerEmail": "guest@auragrand.com",
+      "roomNumber": "501",
+      "issueDate": "2026-10-17",
+      "dueDate": "2026-10-20",
+      "lineItems": [
+        {
+          "description": "The Imperial Presidential Penthouse (3 nights @ $1250/night)",
+          "amount": 3750
+        },
+        {
+          "description": "Royal Auric Spa & Aromatherapy Ritual (1x)",
+          "amount": 240
+        },
+        {
+          "description": "Promotional Privilege Discount (ROYAL10)",
+          "amount": -399
+        },
+        {
+          "description": "Luxury Hospitality Tax & City Tourism Fee (10%)",
+          "amount": 359.1
+        }
+      ],
+      "subtotal": 3990,
+      "tax": 359.1,
+      "discount": 399,
+      "totalAmount": 3950.1,
+      "amountPaid": 3950.1,
+      "balanceDue": 0,
+      "paymentMethod": "Credit Card (Instant Settlement)",
+      "paymentStatus": "Paid",
+      "transactionId": "TXN-981848522"
+    },
+    {
+      "id": "inv_de98ade5",
+      "invoiceNumber": "INV-2026-1940",
+      "bookingId": "bk_f7631c94",
+      "bookingRef": "AGH-57532",
+      "customerName": "Eleanor Vance",
+      "customerEmail": "guest@auragrand.com",
+      "roomNumber": "301",
+      "issueDate": "2026-10-17",
+      "dueDate": "2026-10-20",
+      "lineItems": [
+        {
+          "description": "The Sovereign Executive Suite (3 nights @ $490/night)",
+          "amount": 1470
+        },
+        {
+          "description": "Promotional Privilege Discount (ROYAL10)",
+          "amount": -147
+        },
+        {
+          "description": "Luxury Hospitality Tax & City Tourism Fee (10%)",
+          "amount": 132.3
+        }
+      ],
+      "subtotal": 1470,
+      "tax": 132.3,
+      "discount": 147,
+      "totalAmount": 1455.3,
+      "amountPaid": 1455.3,
+      "balanceDue": 0,
+      "paymentMethod": "Credit Card (Instant Guarantee)",
+      "paymentStatus": "Paid",
+      "transactionId": "TXN-829436975"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev_1",
+      "customerName": "Eleanor Vance",
+      "rating": 5,
+      "date": "2026-10-18",
+      "room": "Azure Deluxe Oceanfront Suite",
+      "comment": "An absolute masterpiece of hospitality. The ocean sunrise from room 401 took our breath away. The staff treated us like royalty and the private dining was unforgettable."
+    },
+    {
+      "id": "rev_2",
+      "customerName": "Readuanul Fahim",
+      "rating": 5,
+      "date": "2026-10-14",
+      "room": "The Imperial Presidential Penthouse",
+      "comment": "Hands down the highest level of luxury on the coastline. The rooftop infinity pool and private Maybach transfers made our anniversary extraordinary."
+    },
+    {
+      "id": "rev_3",
+      "customerName": "Julian Hayes",
+      "rating": 5,
+      "date": "2026-10-09",
+      "room": "Lagoon Garden Deluxe",
+      "comment": "Peaceful, restorative, and spotless. The Himalayan hot stone massage at the Auric Spa melted away months of stress. Can not wait to return."
+    },
+    {
+      "id": "rev_db867e03",
+      "customerName": "Eleanor Vance",
+      "rating": 5,
+      "date": "2026-10-17",
+      "room": "The Imperial Presidential Penthouse",
+      "comment": "Smooth and delightful stay at Aura Grand!"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "log_1792273409229_xbcr",
+      "action": "FLEET_CHARTER_DISPATCHED",
+      "details": "VIP Mobility Charter MAN-UJVL5C-2026 confirmed for Readuanul Fahim: Departure Aura Private Marina — Berth #4 at 14:30",
+      "actor": "Aura Fleet Master",
+      "timestamp": "2026-10-17T21:43:29.229Z"
+    },
+    {
+      "id": "log_1792273236966_hmi2",
+      "action": "ROOM_SENSORY_IOT_TUNED",
+      "details": "Suite #501 environmental telemetry adjusted: Preset 'Obsidian Deep REM Sleep', 19.5°C, Aroma: French Lavender & Roman Chamomile",
+      "actor": "Readuanul Fahim",
+      "timestamp": "2026-10-17T21:40:36.966Z"
+    },
+    {
+      "id": "log_1792272177797_ufb6",
+      "action": "CHANNEL_GDS_PUSH_SYNC",
+      "details": "Manual 2-Way GDS & OTA sync completed across Booking.com, Expedia, Airbnb Luxe, and Amadeus GDS. Inventory parity verified.",
+      "actor": "Readuanul Fahim",
+      "timestamp": "2026-10-17T21:22:57.797Z"
+    },
+    {
+      "id": "log_1792272006397_a110",
+      "action": "DYNAMIC_YIELD_UPDATED",
+      "details": "Yield Engine updated: Multiplier 1.15x, Event 'None', AI Auto-Yield: true",
+      "actor": "Admin Revenue Manager",
+      "timestamp": "2026-10-17T21:20:06.397Z"
+    },
+    {
+      "id": "log_1792270783062_6qr7",
+      "action": "NIGHT_AUDIT_COMPLETED",
+      "details": "Official Night Audit NA-2026-4339 successfully reconciled: Occupancy 13%, RevPAR $609, ADR $4870",
+      "actor": "Admin Authority",
+      "timestamp": "2026-10-17T20:59:43.062Z"
+    },
+    {
+      "id": "log_1792269706437_myvv",
+      "action": "NIGHT_AUDIT_COMPLETED",
+      "details": "Official Night Audit NA-2026-7507 successfully reconciled: Occupancy 13%, RevPAR $609, ADR $4870",
+      "actor": "Admin Authority",
+      "timestamp": "2026-10-17T20:41:46.437Z"
+    },
+    {
+      "id": "log_1792268066431_aaxe",
+      "action": "BOOKING_CREATED",
+      "details": "Reservation confirmed for Tester 2 (The Sovereign Executive Suite, Rm 301) - Total: $1617",
+      "actor": "Tester 2",
+      "timestamp": "2026-10-17T20:14:26.431Z"
+    },
+    {
+      "id": "log_1792267931361_7cuz",
+      "action": "BOOKING_CREATED",
+      "details": "Reservation confirmed for Eleanor Vance (The Sovereign Executive Suite, Rm 301) - Total: $1455.3",
+      "actor": "Eleanor Vance",
+      "timestamp": "2026-10-17T20:12:11.361Z"
+    }
+  ],
+  "yieldRules": {
+    "surgeMultiplier": 1.15,
+    "weekendSurge": true,
+    "weekendMultiplier": 1.2,
+    "occupancyAutoSurge": true,
+    "occupancyThreshold": 75,
+    "autoSurgeBonus": 1.15,
+    "peakEventMode": "None",
+    "peakEventMultiplier": 1,
+    "aiAutoYieldEnabled": true,
+    "updatedAt": "2026-10-17T21:20:06.396Z"
+  },
+  "channelsData": {
+    "lastSyncTimestamp": "2026-10-17T21:22:57.796Z",
+    "syncStatus": "SYNCHRONIZED",
+    "activeChannels": [
+      {
+        "id": "ch_direct",
+        "name": "Aura Direct Sovereign Web Engine",
+        "type": "Direct Booking Engine",
+        "commissionRate": 0,
+        "inventoryAllocated": "100% All Suites",
+        "monthlyRevenue": 68400,
+        "sharePercentage": 74,
+        "status": "Optimal (Zero Commission)",
+        "latencyMs": 12
+      },
+      {
+        "id": "ch_booking",
+        "name": "Booking.com Luxury Collection",
+        "type": "Global OTA",
+        "commissionRate": 15,
+        "inventoryAllocated": "5 Selected Suites",
+        "monthlyRevenue": 14200,
+        "sharePercentage": 15,
+        "status": "2-Way XML Sync Active",
+        "latencyMs": 48
+      },
+      {
+        "id": "ch_expedia",
+        "name": "Expedia VIP Access",
+        "type": "Global OTA",
+        "commissionRate": 18,
+        "inventoryAllocated": "4 Selected Suites",
+        "monthlyRevenue": 6800,
+        "sharePercentage": 7,
+        "status": "Rate Parity Active",
+        "latencyMs": 62
+      },
+      {
+        "id": "ch_airbnb",
+        "name": "Airbnb Luxe & Mansions",
+        "type": "Luxury Boutique OTA",
+        "commissionRate": 12,
+        "inventoryAllocated": "Penthouse & Royal Suites",
+        "monthlyRevenue": 3400,
+        "sharePercentage": 4,
+        "status": "iCal & API Sync Active",
+        "latencyMs": 55
+      },
+      {
+        "id": "ch_amadeus",
+        "name": "Amadeus / Sabre Global GDS",
+        "type": "Corporate Agency GDS",
+        "commissionRate": 5.5,
+        "inventoryAllocated": "Corporate VIP Allocation",
+        "monthlyRevenue": 9600,
+        "sharePercentage": 10,
+        "status": "GDS Live Stream Active",
+        "latencyMs": 38
+      }
+    ],
+    "commissionSavings": 18450
+  },
+  "roomAmbience": {
+    "roomNumber": "501",
+    "activePreset": "Obsidian Deep REM Sleep",
+    "temperatureC": 19.5,
+    "humidityPercentage": 48,
+    "airQualityIndex": "AQI 002 (Pristine Alpine Grade)",
+    "lighting": {
+      "mode": "Circadian Sunlight",
+      "colorTempK": 4200,
+      "brightnessPercentage": 75,
+      "rgbHex": "#ffe8a3"
+    },
+    "aromatherapy": {
+      "activeOil": "French Lavender & Roman Chamomile",
+      "intensityLevel": "Gentle (Level 2/5)",
+      "status": "Diffusing"
+    },
+    "soundscape": {
+      "title": "Binaural Delta Waves",
+      "frequency": "432 Hz Healing Harmony",
+      "volumePercentage": 35,
+      "status": "Playing"
+    },
+    "updatedAt": "2026-10-17T21:40:36.964Z"
+  },
+  "fleetBookings": [
+    {
+      "manifestId": "MAN-UJVL5C-2026",
+      "fleetId": "fleet_yacht",
+      "guestName": "Readuanul Fahim",
+      "guestEmail": "fahim@auragrand.com",
+      "departureTime": "14:30",
+      "departureLocation": "Aura Private Marina — Berth #4",
+      "guestCount": 2,
+      "cateringPreference": "Vintage Dom Pérignon & Oscietra Caviar Service",
+      "status": "CONFIRMED & CLEARED BY PORT CAPTAIN",
+      "timestamp": "2026-10-17T21:43:29.228Z"
+    }
+  ]
+}

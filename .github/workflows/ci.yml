@@ -1,0 +1,41 @@
+name: Aura Grand CI / Verification Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Automated Verification & Security Audit
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 18.x, 20.x, 22.x ]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Start Server in Background
+        run: |
+          node server.js &
+          sleep 3
+
+      - name: Execute Full Verification Test Suite
+        run: npm test
+
+      - name: Verify Attribution & Compliance
+        run: |
+          ! grep -rn "Group 5" public/ backend/ README.md server.js package.json || exit 1

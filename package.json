@@ -1,0 +1,41 @@
+{
+  "name": "aura-grand-hotel-management-system",
+  "version": "2.7.0",
+  "description": "Ultra-Luxury Property Management System (PMS) featuring 3D WebGL Digital Twin, AI Virtual Concierge Butler, Automated RevPAR Night Audit, Multi-Property Portfolio Holding Switcher, and Turnkey Accounting Engine.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node tests/test-suite.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamim-shadman/Hotel-Management-System.git"
+  },
+  "keywords": [
+    "pms",
+    "hospitality",
+    "hotel-management",
+    "threejs",
+    "webgl",
+    "luxury-resort",
+    "revpar",
+    "night-audit",
+    "ai-concierge"
+  ],
+  "author": "Tamim Shadman & Readuanul Farid Fahim",
+  "license": "Commercial",
+  "bugs": {
+    "url": "https://github.com/tamim-shadman/Hotel-Management-System/issues"
+  },
+  "homepage": "https://github.com/tamim-shadman/Hotel-Management-System#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "uuid": "^14.0.3"
+  }
+}
