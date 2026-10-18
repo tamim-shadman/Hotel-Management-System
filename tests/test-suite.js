@@ -1,16 +1,17 @@
 /**
  * AURA GRAND PMS - PRODUCTION AUTOMATED TEST SUITE
  * Authors: Tamim Shadman & Readuanul Farid Fahim
- * Self-Booting & IPv4-Loopback Hardened for Universal CI/CD Execution
+ * In-Process & Fast Execution Architecture for Universal CI/CD
  */
+
+process.env.NODE_ENV = 'test';
 
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { spawn } = require('child_process');
+const { app } = require('../server.js');
 
 const PORT = process.env.PORT || 5000;
-// Force IPv4 loopback to avoid ::1 IPv6 DNS resolution issues in modern Node.js/CI environments
 const BASE_URL = `http://127.0.0.1:${PORT}`;
 
 async function request(path, options = {}) {
@@ -40,6 +41,10 @@ async function request(path, options = {}) {
       });
     });
 
+    req.setTimeout(5000, () => {
+      req.destroy(new Error('Request timed out after 5000ms'));
+    });
+
     req.on('error', reject);
     if (options.body) {
       req.write(typeof options.body === 'string' ? options.body : JSON.stringify(options.body));
@@ -57,30 +62,29 @@ async function isServerReady() {
   }
 }
 
-async function ensureServer() {
+async function startInProcessServer() {
   if (await isServerReady()) {
-    console.log(`📡 Connected to active server instance at ${BASE_URL}\n`);
+    console.log(`📡 Connected to active server instance on ${BASE_URL}\n`);
     return null;
   }
 
-  console.log(`🚀 Starting local server process on ${BASE_URL}...`);
-  const serverProcess = spawn('node', ['server.js'], {
-    cwd: path.join(__dirname, '..'),
-    stdio: 'ignore',
-    env: { ...process.env, PORT: String(PORT), NODE_ENV: 'test' }
+  return new Promise((resolve, reject) => {
+    console.log(`🚀 Starting in-process HTTP server on ${BASE_URL}...`);
+    const server = app.listen(PORT, '127.0.0.1', () => {
+      console.log(`✅ In-process server is live and listening on ${BASE_URL}\n`);
+      resolve(server);
+    });
+    server.on('error', (err) => {
+      if (err.code === 'EADDRINUSE') {
+        isServerReady().then(ready => {
+          if (ready) resolve(null);
+          else reject(err);
+        });
+      } else {
+        reject(err);
+      }
+    });
   });
-
-  const startTime = Date.now();
-  while (Date.now() - startTime < 15000) {
-    await new Promise(r => setTimeout(r, 400));
-    if (await isServerReady()) {
-      console.log(`✅ Test server successfully booted and ready for assertions.\n`);
-      return serverProcess;
-    }
-  }
-
-  try { serverProcess.kill(); } catch (e) {}
-  throw new Error(`Server failed to boot within 15 seconds on ${BASE_URL}`);
 }
 
 async function runTestSuite() {
@@ -88,7 +92,7 @@ async function runTestSuite() {
   console.log('🧪 AURA GRAND PMS - PRODUCTION VERIFICATION TEST SUITE 🧪');
   console.log('========================================================\n');
 
-  let serverProcess = null;
+  let serverInstance = null;
   let passed = 0;
   let failed = 0;
 
@@ -103,7 +107,7 @@ async function runTestSuite() {
   }
 
   try {
-    serverProcess = await ensureServer();
+    serverInstance = await startInProcessServer();
 
     // 1. Health & Security Headers
     console.log('--- 1. System Health & Security Headers ---');
@@ -210,10 +214,10 @@ async function runTestSuite() {
     console.error(`\n❌ Fatal test suite execution error: ${fatalErr.message}`);
     failed++;
   } finally {
-    if (serverProcess) {
-      console.log('\n🛑 Shutting down spawned test server...');
+    if (serverInstance) {
+      console.log('\n🛑 Closing in-process test server...');
       try {
-        serverProcess.kill('SIGTERM');
+        await new Promise(r => serverInstance.close(r));
       } catch (e) {}
     }
   }
